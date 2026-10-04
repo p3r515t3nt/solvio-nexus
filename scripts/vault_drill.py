@@ -172,11 +172,14 @@ def _run(argv: list[str] | None = None) -> int:
     # Ein Wegwerf-Executor beweist es, statt es zu behaupten: derselbe Weg wie
     # in der Produktion, dieselbe Policy, dasselbe Modul-Muster — nur ein
     # anderer Prozess und ein anderer Schluesselspeicher.
+    # Die verdeckte lokale Eingabe und erfolgreiche Umschlagoeffnung
+    # bestaetigen die Anwesenheit nur fuer diese isolierte Wiederherstellung.
     recovered = 0
     for policy in entries:
         try:
             with SC.bound(SC.UseContext(origin=AP.OriginClass.LOCAL_OWNER,
-                                        capability=policy.allowed_capabilities[0])):
+                                        capability=policy.allowed_capabilities[0],
+                                        user_present=True)):
                 length = _disposable_executor(probe, policy)
         except (B.SecretDenied, B.SecretUnavailable) as exc:
             print(f"      {policy.secret_ref}: NICHT wiederhergestellt ({exc})")

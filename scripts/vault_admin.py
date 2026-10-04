@@ -43,15 +43,7 @@ from solvio.secret_vault import policy as VP            # noqa: E402
 from solvio.secret_vault.broker import SecretBroker     # noqa: E402
 from solvio.secret_vault.store import VaultStore        # noqa: E402
 
-#: Wie lange ein Eingabefenster offen bleibt.
-#:
-#: Fuenf Minuten waren zu kurz und das ist gemessen: beim ersten Versuch lief
-#: die Frist ab, waehrend der Besitzer noch zum Rechner ging. Eine MENSCHLICHE
-#: Grenze ist keine Maschinenfrist — sie wartet auf jemanden, der aufsteht.
-#: Eine Frist gibt es trotzdem, damit ein vergessenes Fenster nicht ewig einen
-#: Vorgang blockiert.
-#: Frist des APPLE-EVENTS. Ohne sie gilt die Vorgabe von System Events: 60
-#: Sekunden — zu wenig fuer einen Menschen, der eine Passphrase aussucht.
+#: Frist des nativen Apple-Events fuer die verdeckte Passworteingabe.
 APPLE_EVENT_TIMEOUT = 900
 
 #: Frist des PROZESSES. Bewusst groesser als die innere, damit die innere
@@ -60,28 +52,10 @@ DIALOG_TIMEOUT = 960
 
 
 def ask_secret(prompt: str, title: str = "SOLVIO — Tresor") -> str:
-    """Fragt verdeckt nach einem Wert. Der Wert bleibt in diesem Prozess.
+    """Liest verdeckt im Terminal oder ueber den nativen macOS-Dialog.
 
-    ZWEI WEGE, und der erste ist der bessere. Welcher gilt, entscheidet nicht
-    eine Vorliebe, sondern ob ein Terminal da ist.
-
-    **Am Terminal: `getpass`.** Kein Echo, kein `argv`, keine Historie, keine
-    Umgebung. Und vor allem: keine dritte Partei. CLAUDE.md nennt „Passwort im
-    Terminal" ausdruecklich als menschliche Grenze — das ist sie.
-
-    **Ohne Terminal: ein natives Fenster.** Das braucht es, wenn dieses Skript
-    aus einem Dienst heraus laeuft, der keine Eingabe hat.
-
-    Warum die Reihenfolge so herum ist, hat die Abnahme gelehrt. Der
-    Fensterweg hat drei Anlaeufe gekostet: ohne `activate` stand das Fenster
-    hinter allem anderen; MIT `activate` ueber System Events brachte er dessen
-    Apple-Event-Frist mit, die auch `with timeout of` nicht zuverlaessig
-    aushebelt — das Fenster stand da, der Mensch tippte, und die Leitung
-    dahinter lief nach 60 Sekunden ab. Ein Eingabeweg, der davon abhaengt, wie
-    schnell jemand tippt, ist keiner.
-
-    Sicherheitsverhalten ist auf beiden Wegen dasselbe: verdeckt, prozesslokal,
-    und der Wert wird nirgends zurueckgegeben ausser an den Aufrufer.
+    Der Wert bleibt im aufrufenden Prozess und wird weder protokolliert noch
+    ueber Argumente oder Umgebungsvariablen weitergegeben.
     """
     if sys.stdin is not None and sys.stdin.isatty():
         print(prompt)

@@ -1,7 +1,7 @@
 {
   "_comment": "Tracked test baseline (P1A.8/H2). Regenerate ONLY via scripts/update_test_baseline.py; the runner never writes it.",
-  "suites": 319,
-  "count": 5865,
+  "suites": 320,
+  "count": 5869,
   "tests": [
     "memory/test_hardening.py::TestCrashWindow.test_delete_failure_after_ledger_commit_stays_denied",
     "memory/test_hardening.py::TestCrashWindow.test_live_read_deny_after_tombstone_before_delete",
@@ -5581,6 +5581,10 @@
     "test_unattended_autonomy.py::t_p02_the_resolved_binary_runs_in_a_bare_child_process",
     "test_unattended_autonomy.py::t_p02_there_is_no_trusted_git_is_an_error_not_a_dialog",
     "test_unattended_autonomy.py::t_p03_the_canonical_broker_can_lend_the_anthropic_credential",
+    "test_vault_recovery_drill.py::t_cancelled_recovery_does_not_install_a_key_or_recover",
+    "test_vault_recovery_drill.py::t_recovery_restores_an_entry_requiring_owner_presence",
+    "test_vault_recovery_drill.py::t_the_same_entry_remains_denied_without_presence_outside_the_drill",
+    "test_vault_recovery_drill.py::t_wrong_recovery_passphrase_does_not_install_a_key_or_recover",
     "test_vault_rescope.py::t_a_missing_version_is_refused",
     "test_vault_rescope.py::t_a_replayed_approval_cannot_widen_a_changed_scope",
     "test_vault_rescope.py::t_a_scope_that_moved_meanwhile_is_refused",

@@ -72,14 +72,30 @@ vorhandenen `scripts/update_test_baseline.py` an die ausdrücklich geänderten
 Testidentitäten angepasst. Sie wird nicht vom Runner still repariert.
 
 Nach den 84 Suite-Ausschlüssen und der einen historischen Aussage umfasst
-der öffentliche deklarierte Bestand 5865 Identitäten. Vier behaltene
+der öffentliche deklarierte Bestand zunächst 5865 Identitäten. Vier neue
+Regressionstests des Recovery-Werkzeugs ergänzen ihn auf 5869 Identitäten
+in 320 Suites. Vier behaltene
 Provenienz-/Fixturefälle tragen passend zum öffentlichen Prüfgegenstand neue
 Namen. Diese Zahl beschreibt die Baseline und keinen Ausführungserfolg.
 
-Die erste Prüfung der öffentlichen Vorbereitung meldete Fehler. Nach der
-Korrektur der Distribution ist eine erneute vollständige Prüfung erforderlich.
-Es wird noch kein vollständiges grünes öffentliches Gate behauptet. Optionale
-Anbieter-, native Laufzeit- und Gerätebedingungen müssen bei einer tatsächlichen
-Prüfung ausgewiesen werden. Synthetische Tests ersetzen keine persönliche
-Liveabnahme, insbesondere nicht die noch offene Flugsuche oder vollständige
-Apple-Mail-Abdeckung.
+## Ausgeführte Prüfungen
+
+Der vollständige kanonische Core-Lauf am geprüften Basisstand vom 4. Oktober
+2026 ergab 319 Suites: 5864 bestanden, 0 Fehler, 1 übersprungen. Der einzige
+Skip ist der ausdrücklich deaktivierte Live-Node-Test; er benötigt einen
+separat eingerichteten Fernserver. Es gab keine fehlenden oder unerwarteten
+Identitäten, keine Baselineabweichung, keinen Workerfehler und keinen Timeout.
+
+Danach wurde ausschließlich das administrative Recovery-Werkzeug ergänzt:
+Nach der verdeckten lokalen Eingabe und erfolgreichen Umschlagöffnung meldet
+seine isolierte Wiederherstellung die Anwesenheit des Besitzers. Die negative
+Probe ohne Schlüssel und die produktive Broker-/Berechtigungspolicy bleiben
+unverändert. Vier zusätzliche synthetische CLI-Prüfungen bestanden: Zugang mit
+Anwesenheitsanforderung, falsche Passphrase, Abbruch und weiterhin verweigerter
+Zugriff ohne Anwesenheit außerhalb des Drills. Diese Nachprüfung ist vom
+vollständigen Lauf des Basisstands getrennt; sie ersetzt keinen neuen Gesamtlauf.
+
+Der optionale Node hat zusätzlich 131 bestandene lokale Tests. Anbieter-,
+Geräte- und Fernserverbedingungen sind dadurch nicht live abgenommen.
+Synthetische Tests ersetzen keine persönliche Liveabnahme, insbesondere nicht
+die noch offene Flugsuche oder vollständige Apple-Mail-Abdeckung.
