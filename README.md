@@ -1,5 +1,7 @@
 # SOLVIO Nexus
 
+Dein persönlicher Assistent. Ein gemeinsamer Ort für Chat, Sprache und Aufträge.
+
 SOLVIO Nexus ist ein persönlicher KI-Assistent für Gespräche, Recherche und
 Aufträge. Der Mac Core verwaltet den gemeinsamen Zustand, die Fähigkeiten und
 die Regeln für Datenzugriff und Aktionen. Ein Browser-Dashboard und eine
@@ -146,7 +148,7 @@ Freigabe dort, wo die Aktion diesen verlangt. Details: [ARCHITECTURE.md](ARCHITE
 
 Die Studio-Portal-Tests verwenden eine vollständig synthetische Kontoseite
 mit erfundenen Kontodaten und Entwürfen. Der deklarierte öffentliche Core-Bestand
-umfasst 5865 Tests; diese Zahl ist kein bestandener Testlauf. Für den optionalen Node wurden zusätzlich 131 lokale Tests bestanden.
+umfasst 5869 Tests; diese Zahl ist kein bestandener Testlauf. Für den optionalen Node wurden zusätzlich 131 lokale Tests bestanden.
 Die Abgrenzung
 steht in [PUBLIC_TEST_SCOPE.md](PUBLIC_TEST_SCOPE.md).
 
