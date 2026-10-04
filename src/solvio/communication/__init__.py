@@ -1,0 +1,2 @@
+"""Bestaetigte, kanalunabhaengige Empfaengerbindungen."""
+

@@ -1,0 +1,110 @@
+# Local dependencies and build output
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.build/
+DerivedData/
+.DS_Store
+# Private operator configuration and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.p12
+*.p8
+*.mobileprovision
+*.sqlite
+*.sqlite3
+*.db
+# Local tooling state
+.claude/
+.codex/
+
+# Core local working files
+# Geheimnisse, niemals einchecken
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.token
+secrets/
+credentials*
+
+# Python-Umgebung und Build-Artefakte
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# Werkzeug-Caches
+.uv/
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+
+# Laufzeitdaten
+logs/*
+!logs/.gitkeep
+data/*
+!data/.gitkeep
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+# temporaere Audiodateien
+*.wav
+*.mp3
+*.flac
+*.opus
+*.raw
+
+# macOS
+.DS_Store
+
+data/
+ha_entities.json
+_codex_test/
+
+# STEP 19D: offsite hardening
+*.secret
+runtime/
+memory/private/
+.vscode/
+.idea/
+
+# STEP 20: Memory-Foundation Laufzeit-Artefakte (Stores/Backups nie committen)
+*.sqlite3-wal
+*.sqlite3-shm
+*.sqlite3.bak
+*.sqlite3.bak.manifest.json
+
+# STEP 21: semantic memory — model downloads / caches never in git
+*.safetensors
+*.onnx
+*.pt
+*.gguf
+models/
+.hf_cache/
+.venv-bench/
+
+# real node registry (paths only, no secrets) - example is tracked
+config/nodes.json
+.solvio-portal/
+
+# Claude Code: die Regeln unter .claude/rules/ gehoeren ins Repository,
+# der Rest nicht.
+#
+# Warum das hier steht: die Arbeitskopien unter .claude/worktrees/ sind
+# zusammen mehrere Gigabyte gross, und .claude/settings.local.json ist
+# rechnerlokal. Beides war bisher nur ueber `.git/info/exclude` und die
+# globale Git-Ignore-Datei ausgeschlossen — beide reisen NICHT mit dem
+# Repository mit. In einem frischen Klon fehlte der Schutz.
+.claude/worktrees/
+.claude/settings.local.json

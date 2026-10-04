@@ -1,0 +1,1015 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		006260A7F46E4FB7030A25CD /* TaskStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = C841F183454B70886065923A /* TaskStart.swift */; };
+		052E3D5B685F1715A7C6BAE8 /* VoiceFocusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9925206220EF538EDCFD192 /* VoiceFocusTests.swift */; };
+		0672713B26F5AF6EC5D00C19 /* TaskHomeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9427D7A8B207327F72E835C /* TaskHomeModelTests.swift */; };
+		0E37621B3ACF47165E57D9FB /* TaskFollowupModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1267F0D5D55C48AFFFBE1671 /* TaskFollowupModelTests.swift */; };
+		133A780CF7D57DBFCDE9B4EB /* ContactSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D12138ACECAFB2D185805A0 /* ContactSourceTests.swift */; };
+		13B4ACAA08658EEB8C31E983 /* VoiceAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C610527DEF72A2A16561D40 /* VoiceAudio.swift */; };
+		1579DF228C021FD82D1D1FC5 /* ControlCenterViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019C1FB04DB77E06716489B /* ControlCenterViews.swift */; };
+		15E85D7C19AAA0EB798D6D6E /* ConversationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38706E385DE3B1DB474C96F4 /* ConversationModelTests.swift */; };
+		16387607F0EE5B3439041884 /* PaymentSheets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87ECC77CB6B00A358731EB78 /* PaymentSheets.swift */; };
+		17F88E20D84C9FF03A81912E /* TaskPortalFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678EAFDBCE34D3BD7DF961F0 /* TaskPortalFields.swift */; };
+		18D3706688E4D23D6A8F4655 /* VoiceTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49977677CEDDA3EFC7DC06A /* VoiceTransport.swift */; };
+		1B9255C402249C5DCD1D31BF /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = C68DB9CCDDF65A4C3583A37F /* GoogleSignIn */; };
+		1CA59CF74B2B96D994A67F5B /* PresenceRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CA79997BC7FDDA7A4A8F5F /* PresenceRenderer.swift */; };
+		1F29AC4A21231D9BC1A972EB /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08D4B0137793ECCF5826D0A /* ContactsView.swift */; };
+		1FD602054D78B0A01845881F /* ConversationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7365D8806D05283FB7E9D74B /* ConversationListView.swift */; };
+		23DAD2742C0F1C2C8F835822 /* VoiceFocus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC3BBB2315C5B3603FF5BF0 /* VoiceFocus.swift */; };
+		23F033EBE78D1C14B62F9A8D /* PushTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0A050767BAC0FFEC9550E8 /* PushTests.swift */; };
+		26CA8F72C6F8740210BA1772 /* GoogleSignInClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AE8E03EC238B0687F84BF4 /* GoogleSignInClientTests.swift */; };
+		26CC9B312D258B6E918F4344 /* PlannedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C1D776B04B7E69D9F96C80 /* PlannedView.swift */; };
+		2D52C692DF844C6F7390CEB8 /* PushCredentialImport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3786651FC5C4A16C2C57D72F /* PushCredentialImport.swift */; };
+		31171BDD5DD3B68790F2188A /* WissenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58721DC9A2FFBED0B49B7901 /* WissenView.swift */; };
+		315B2DC08E2A7AB258CE86B3 /* PushNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC2DD54A78B9FAF07204C22 /* PushNotifications.swift */; };
+		3183ACF44194492AF84FDB63 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1DB9E732A701BE37B96716B /* HomeView.swift */; };
+		34A6C01B6D59DFEF2A286F7B /* VoiceDuplexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85F04565EAA7B669E1D228D8 /* VoiceDuplexTests.swift */; };
+		35917451FD8DA179F4382806 /* ConversationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F737F796952DD4B7A3F62DA5 /* ConversationModel.swift */; };
+		37241AB69A7037C0F0F73A59 /* TaskCostApprovalNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD57A90EE8183406FB61BDB6 /* TaskCostApprovalNetworkingTests.swift */; };
+		375A2B79D1867F25BF4E2AA0 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF9F71B0BF8458659128923 /* QRScannerView.swift */; };
+		3F1D03F5245628E0458594CF /* WissenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2D521F274B8B21B33186CE /* WissenModel.swift */; };
+		3FE2263B333202BFE35711A8 /* EverydaySetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C79412EEEB282BD295A25A /* EverydaySetupView.swift */; };
+		457A7F7AA2572BF00F289B99 /* GoogleConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09D77BBB7240FBA6A313C5D8 /* GoogleConnectionView.swift */; };
+		46698A80A0391F25E5917838 /* ApprovalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B40AC1BD6537B00E568C19F /* ApprovalsView.swift */; };
+		575B2E805B0DDCE4153DAEB3 /* PresenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B126C7409849C40E852451E3 /* PresenceModel.swift */; };
+		58987F5F35C0061DE89ECDC3 /* AssistantSectionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5EBBA9B848AC6907485761 /* AssistantSectionsTests.swift */; };
+		594B4F322D2410C1EFE0EE25 /* ConversationTextTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C16D40E88BF4C0A0EBC285C /* ConversationTextTests.swift */; };
+		5A52EC8133E988CC478E0E09 /* ConnectionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05254798C5AAEF696E874E8C /* ConnectionsTests.swift */; };
+		6369AF7895C2BDED969AC429 /* AgentResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E00A9387893938F7EC397B5 /* AgentResults.swift */; };
+		649ED826ADA1045D29C39EF6 /* VoiceBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E587CC0DF73B9A3FB33CF1DF /* VoiceBindingTests.swift */; };
+		6504729B15E41A8DA869EA45 /* AgentResultsModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6CBA1470373E5EE4557AF5 /* AgentResultsModelTests.swift */; };
+		6641609F98F0FA9CF1715C97 /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2296DF834190409C6CA48 /* ConversationView.swift */; };
+		6AC66C21BE787B5F17B53C2C /* ConversationNetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D357522713B7657B126884 /* ConversationNetworkingTests.swift */; };
+		6ADD6DFD1A828A97BBCEAA5E /* VoiceHandoff.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74E7DA32DF043F5B36333E52 /* VoiceHandoff.swift */; };
+		6B4E90CE366B5C4834E66530 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF500A3B510DCC9F24EAB8A /* Networking.swift */; };
+		71E04E088B4C183C3861AABC /* ChatPresenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8D8E38EA706BCFDA5BE121 /* ChatPresenceView.swift */; };
+		775777DD7A8D8D6F6FC88A78 /* ControlCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B19E466AF5337AF147A13B2B /* ControlCenter.swift */; };
+		775EC31A4C1B9F6DABB32A13 /* InboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0EDB1CAD6D95141AA4BA4 /* InboxView.swift */; };
+		7EF108E0D159A732071C5FFE /* ProviderSwitchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3917F25AD980597DC40DDF2 /* ProviderSwitchTests.swift */; };
+		7FC163DEB2A2FA4E371F7001 /* PaymentClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7119CE5B63F5292D48226446 /* PaymentClient.swift */; };
+		86FAAE98AFD4D3AE431C4F37 /* ChatVoiceHandoffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A7834178E9058800A6B83 /* ChatVoiceHandoffTests.swift */; };
+		8896AE639FFD3BFE18471B0A /* PaymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073AC01AAD2424089EC52883 /* PaymentModel.swift */; };
+		88F56C9CF54149DB96EA2034 /* ApprovalNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1B145A04D7CF32CEC00EEB /* ApprovalNavigationTests.swift */; };
+		893D39109ACEB763406F1749 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0B662D13503D9DEA4A959D2 /* Assets.xcassets */; };
+		89D4DE72808ADF6CA4CCBD2D /* AssistantSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59F9559EA71A37B40BDC6E9 /* AssistantSections.swift */; };
+		8EA921D348F125531F14726B /* ConnectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC14473E98160A533062B48B /* ConnectionsView.swift */; };
+		92170F0C7643ECA2038630E5 /* SolvioApprovalsKit in Frameworks */ = {isa = PBXBuildFile; productRef = AF7295BE6F61214880673262 /* SolvioApprovalsKit */; };
+		937E31D642FF56F03740532B /* TaskHomeFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8751B01BDCF50267587970 /* TaskHomeFields.swift */; };
+		952AF7B014C1DE02C3675C94 /* WissenModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D1323CAE8427BCC6F68EB63 /* WissenModelTests.swift */; };
+		95E07C26ABD51382B6AE1EB7 /* SystemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945899BC650501A8B3F8E3E0 /* SystemView.swift */; };
+		9EC4FEFAAAB248F5CC3318AC /* TresorScopeDiffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDCD68F4C236C7554182AED /* TresorScopeDiffTests.swift */; };
+		9F507D2AF79B6677B2BD7C0F /* AppAttest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8CC2DC947AC15C828C16A1 /* AppAttest.swift */; };
+		A20BBC36E1B2B28159242F99 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29C59718C673C800BB33C32 /* App.swift */; };
+		A3B3FC7E30E9EAA8CD595D20 /* SolvioPresenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7CE49FC08A86CEA2E6E640 /* SolvioPresenceView.swift */; };
+		A3D2E0C0A80A7365BA01A52C /* PushCredentialImportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F203C752DDDAA77F39D312EF /* PushCredentialImportTests.swift */; };
+		A4E5F01DA7469D3C68DA8C22 /* ApprovalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF0C92526E6E07115F3E65D /* ApprovalDetailView.swift */; };
+		A62D957E558E9C95F39B0A74 /* PresenceGallery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952833BFD229F4B43B61F440 /* PresenceGallery.swift */; };
+		A84025B4B1EB44E2E3EF2274 /* TaskCostApprovalPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CEC4570D5B52535DEC74C25 /* TaskCostApprovalPreview.swift */; };
+		A9F355B3FA65462EA4AFA86F /* TresorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659D925B7E1D270D3D661EB0 /* TresorModel.swift */; };
+		AF4D005F4AA14677CF4F71D4 /* PaymentApprovalCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FBA3823BED4F15ABCB5AB5B /* PaymentApprovalCard.swift */; };
+		AFE96A67CAEBAA9326CB1B38 /* TaskFollowup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A61DD5CC5D84D6E71D52F6E /* TaskFollowup.swift */; };
+		B08F7ED85825265C3E36157D /* PaymentApprovalCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D878C9D451C49BC71C126 /* PaymentApprovalCardTests.swift */; };
+		B15F09D04EA3638528E3E556 /* ChatPresenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BE0C1C673E2FB277D8B06 /* ChatPresenceTests.swift */; };
+		B719A9B044382D29FC56BB57 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3CBE4DC0DBCDE3177E343D /* Theme.swift */; };
+		B9A7A845148B0F219262A5AC /* ActionQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB11455FE5F03B29C052F7 /* ActionQuestion.swift */; };
+		BC1A10EE9ADD7260E684D4E0 /* GoogleSignInClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E120A946575CC4B54AC8E278 /* GoogleSignInClient.swift */; };
+		BCDBCE35F7156553312D6A04 /* TresorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E339C932869034563ECB7 /* TresorView.swift */; };
+		C0C892D8BC1AFF2425ACC4CF /* TresorRescopeFlowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390F24ECDD0A9AEB64FF65ED /* TresorRescopeFlowTests.swift */; };
+		C49359FB8500070C0A9978F1 /* ChatLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59318457C51824E85FE4AA2 /* ChatLayoutTests.swift */; };
+		C6F70654EA1604598AB05C26 /* PresenceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5179CB1C65F330AD5AEB7A5D /* PresenceModelTests.swift */; };
+		CDED3BD170934C210F839453 /* VoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788C90816CDCB3AE41AEE5B5 /* VoiceView.swift */; };
+		D10435211DC490EFF56BAA11 /* TaskActionFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE4560B940E1BA257A8B0E /* TaskActionFields.swift */; };
+		D2806F2A8D07E0D61473FFA3 /* MessageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC92770A05AA6ECB05FABFD /* MessageComposer.swift */; };
+		D516747103E34CF53FCFA834 /* AgentResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBEC1C5BDDB39E1EDAC56E9 /* AgentResultsView.swift */; };
+		D755D782B046DDA408CA410E /* ContactRefreshTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FA5863BC42AE06D1D731CB /* ContactRefreshTests.swift */; };
+		D79C0EFE985F99723EC89E85 /* TaskCostApproval.swift in Sources */ = {isa = PBXBuildFile; fileRef = B933E9BDC398F2BB3F538255 /* TaskCostApproval.swift */; };
+		D8646B5BB7C9CD707366485B /* TaskPortalModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28316B99B5C9DC29B58AE586 /* TaskPortalModelTests.swift */; };
+		DC5769C4A69C3BCB66B3623B /* WissenDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B381353EBE5D8EFA14165284 /* WissenDetailView.swift */; };
+		DD3D9B0BFF851E6FB5DD3EC6 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198BF5D607A5928D0E393420 /* PaymentView.swift */; };
+		DE0F6F3CE87EAF50AA8FF02E /* VoiceSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4802818368F65F72958AF616 /* VoiceSession.swift */; };
+		DF3A952FF61094908E81055D /* TresorScopeSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378A30DEF4DA3564DFB76418 /* TresorScopeSheet.swift */; };
+		E7AE7BE58A497AC077475550 /* TaskFileModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1A9A0DC9D4E6F41643435C /* TaskFileModelTests.swift */; };
+		EC5A39391413DE969AF98437 /* ContactRefreshModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CDC84BAE14236B582BFB3F /* ContactRefreshModel.swift */; };
+		F0006F6F4EADC4FE6AD52A25 /* TaskCostApprovalModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DECF32BF01D49DBB6D6B51 /* TaskCostApprovalModelTests.swift */; };
+		F644F47B03FED4C25E5CC0C8 /* Security.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8959B9523719205D310840AB /* Security.swift */; };
+		F8CF40ADB982E45A70281A4D /* TresorClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC86D3E0858E49637882DD9C /* TresorClient.swift */; };
+		F96593C24F4E7FE1F5D31D34 /* TresorAddSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D671944DCEF86D71162024 /* TresorAddSheet.swift */; };
+		F9FA58A19C34DBD12457E36F /* MessageComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BBE199375A8C880759FCE5 /* MessageComposerTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2D69674F57A93AA266AB7BFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83FB430A3C56AB141839CB36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E208786BCFB29374A343312;
+			remoteInfo = SolvioApprovals;
+		};
+		4580B0A9FB0B144CCD73D629 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83FB430A3C56AB141839CB36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E208786BCFB29374A343312;
+			remoteInfo = SolvioApprovals;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03BB11455FE5F03B29C052F7 /* ActionQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionQuestion.swift; sourceTree = "<group>"; };
+		04F0EDB1CAD6D95141AA4BA4 /* InboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxView.swift; sourceTree = "<group>"; };
+		05254798C5AAEF696E874E8C /* ConnectionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsTests.swift; sourceTree = "<group>"; };
+		073AC01AAD2424089EC52883 /* PaymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentModel.swift; sourceTree = "<group>"; };
+		09D77BBB7240FBA6A313C5D8 /* GoogleConnectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleConnectionView.swift; sourceTree = "<group>"; };
+		10B8724F92B011B1B257803C /* SolvioApprovals.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SolvioApprovals.entitlements; sourceTree = "<group>"; };
+		1267F0D5D55C48AFFFBE1671 /* TaskFollowupModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFollowupModelTests.swift; sourceTree = "<group>"; };
+		198BF5D607A5928D0E393420 /* PaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
+		1B40AC1BD6537B00E568C19F /* ApprovalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalsView.swift; sourceTree = "<group>"; };
+		1BF0C92526E6E07115F3E65D /* ApprovalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalDetailView.swift; sourceTree = "<group>"; };
+		28316B99B5C9DC29B58AE586 /* TaskPortalModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPortalModelTests.swift; sourceTree = "<group>"; };
+		2A61DD5CC5D84D6E71D52F6E /* TaskFollowup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFollowup.swift; sourceTree = "<group>"; };
+		2C8CC2DC947AC15C828C16A1 /* AppAttest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAttest.swift; sourceTree = "<group>"; };
+		2D12138ACECAFB2D185805A0 /* ContactSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSourceTests.swift; sourceTree = "<group>"; };
+		309D878C9D451C49BC71C126 /* PaymentApprovalCardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentApprovalCardTests.swift; sourceTree = "<group>"; };
+		33BF417EA0F4249B43493F90 /* SolvioApprovals.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = SolvioApprovals.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3786651FC5C4A16C2C57D72F /* PushCredentialImport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushCredentialImport.swift; sourceTree = "<group>"; };
+		378A30DEF4DA3564DFB76418 /* TresorScopeSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresorScopeSheet.swift; sourceTree = "<group>"; };
+		38706E385DE3B1DB474C96F4 /* ConversationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationModelTests.swift; sourceTree = "<group>"; };
+		390F24ECDD0A9AEB64FF65ED /* TresorRescopeFlowTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresorRescopeFlowTests.swift; sourceTree = "<group>"; };
+		41DECF32BF01D49DBB6D6B51 /* TaskCostApprovalModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCostApprovalModelTests.swift; sourceTree = "<group>"; };
+		4802818368F65F72958AF616 /* VoiceSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceSession.swift; sourceTree = "<group>"; };
+		4A3C6C18626630E97CB30A49 /* SolvioApprovalsAppTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SolvioApprovalsAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B1A9A0DC9D4E6F41643435C /* TaskFileModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskFileModelTests.swift; sourceTree = "<group>"; };
+		4B1B145A04D7CF32CEC00EEB /* ApprovalNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApprovalNavigationTests.swift; sourceTree = "<group>"; };
+		4CDCD68F4C236C7554182AED /* TresorScopeDiffTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresorScopeDiffTests.swift; sourceTree = "<group>"; };
+		4FBA3823BED4F15ABCB5AB5B /* PaymentApprovalCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentApprovalCard.swift; sourceTree = "<group>"; };
+		5019C1FB04DB77E06716489B /* ControlCenterViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenterViews.swift; sourceTree = "<group>"; };
+		50CDC84BAE14236B582BFB3F /* ContactRefreshModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRefreshModel.swift; sourceTree = "<group>"; };
+		5179CB1C65F330AD5AEB7A5D /* PresenceModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceModelTests.swift; sourceTree = "<group>"; };
+		55291D89439BAE995D7D1FAF /* SolvioApprovalsNavigationUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = SolvioApprovalsNavigationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58721DC9A2FFBED0B49B7901 /* WissenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WissenView.swift; sourceTree = "<group>"; };
+		58C2296DF834190409C6CA48 /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
+		5B0A050767BAC0FFEC9550E8 /* PushTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTests.swift; sourceTree = "<group>"; };
+		5CF500A3B510DCC9F24EAB8A /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		5E00A9387893938F7EC397B5 /* AgentResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentResults.swift; sourceTree = "<group>"; };
+		659D925B7E1D270D3D661EB0 /* TresorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresorModel.swift; sourceTree = "<group>"; };
+		678EAFDBCE34D3BD7DF961F0 /* TaskPortalFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskPortalFields.swift; sourceTree = "<group>"; };
+		6C16D40E88BF4C0A0EBC285C /* ConversationTextTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTextTests.swift; sourceTree = "<group>"; };
+		6CEC4570D5B52535DEC74C25 /* TaskCostApprovalPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCostApprovalPreview.swift; sourceTree = "<group>"; };
+		6D1323CAE8427BCC6F68EB63 /* WissenModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WissenModelTests.swift; sourceTree = "<group>"; };
+		6EC3BBB2315C5B3603FF5BF0 /* VoiceFocus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceFocus.swift; sourceTree = "<group>"; };
+		7119CE5B63F5292D48226446 /* PaymentClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentClient.swift; sourceTree = "<group>"; };
+		7365D8806D05283FB7E9D74B /* ConversationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationListView.swift; sourceTree = "<group>"; };
+		748A7834178E9058800A6B83 /* ChatVoiceHandoffTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVoiceHandoffTests.swift; sourceTree = "<group>"; };
+		74E7DA32DF043F5B36333E52 /* VoiceHandoff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceHandoff.swift; sourceTree = "<group>"; };
+		788C90816CDCB3AE41AEE5B5 /* VoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceView.swift; sourceTree = "<group>"; };
+		7D8751B01BDCF50267587970 /* TaskHomeFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskHomeFields.swift; sourceTree = "<group>"; };
+		835E339C932869034563ECB7 /* TresorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresorView.swift; sourceTree = "<group>"; };
+		85F04565EAA7B669E1D228D8 /* VoiceDuplexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceDuplexTests.swift; sourceTree = "<group>"; };
+		86FA5863BC42AE06D1D731CB /* ContactRefreshTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRefreshTests.swift; sourceTree = "<group>"; };
+		873BE0C1C673E2FB277D8B06 /* ChatPresenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenceTests.swift; sourceTree = "<group>"; };
+		87D357522713B7657B126884 /* ConversationNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationNetworkingTests.swift; sourceTree = "<group>"; };
+		87ECC77CB6B00A358731EB78 /* PaymentSheets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSheets.swift; sourceTree = "<group>"; };
+		8959B9523719205D310840AB /* Security.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Security.swift; sourceTree = "<group>"; };
+		8A7CE49FC08A86CEA2E6E640 /* SolvioPresenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolvioPresenceView.swift; sourceTree = "<group>"; };
+		8CF9F71B0BF8458659128923 /* QRScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerView.swift; sourceTree = "<group>"; };
+		945899BC650501A8B3F8E3E0 /* SystemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemView.swift; sourceTree = "<group>"; };
+		952833BFD229F4B43B61F440 /* PresenceGallery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceGallery.swift; sourceTree = "<group>"; };
+		95CA79997BC7FDDA7A4A8F5F /* PresenceRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceRenderer.swift; sourceTree = "<group>"; };
+		97D671944DCEF86D71162024 /* TresorAddSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresorAddSheet.swift; sourceTree = "<group>"; };
+		9C610527DEF72A2A16561D40 /* VoiceAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceAudio.swift; sourceTree = "<group>"; };
+		9D3CBE4DC0DBCDE3177E343D /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		B0B662D13503D9DEA4A959D2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B126C7409849C40E852451E3 /* PresenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceModel.swift; sourceTree = "<group>"; };
+		B19E466AF5337AF147A13B2B /* ControlCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlCenter.swift; sourceTree = "<group>"; };
+		B381353EBE5D8EFA14165284 /* WissenDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WissenDetailView.swift; sourceTree = "<group>"; };
+		B49977677CEDDA3EFC7DC06A /* VoiceTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceTransport.swift; sourceTree = "<group>"; };
+		B4AE8E03EC238B0687F84BF4 /* GoogleSignInClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInClientTests.swift; sourceTree = "<group>"; };
+		B59318457C51824E85FE4AA2 /* ChatLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLayoutTests.swift; sourceTree = "<group>"; };
+		B933E9BDC398F2BB3F538255 /* TaskCostApproval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCostApproval.swift; sourceTree = "<group>"; };
+		B9427D7A8B207327F72E835C /* TaskHomeModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskHomeModelTests.swift; sourceTree = "<group>"; };
+		BD57A90EE8183406FB61BDB6 /* TaskCostApprovalNetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCostApprovalNetworkingTests.swift; sourceTree = "<group>"; };
+		BD6CBA1470373E5EE4557AF5 /* AgentResultsModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentResultsModelTests.swift; sourceTree = "<group>"; };
+		BE2D521F274B8B21B33186CE /* WissenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WissenModel.swift; sourceTree = "<group>"; };
+		BFC2DD54A78B9FAF07204C22 /* PushNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotifications.swift; sourceTree = "<group>"; };
+		C1DB9E732A701BE37B96716B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		C29C59718C673C800BB33C32 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		C5BBE199375A8C880759FCE5 /* MessageComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageComposerTests.swift; sourceTree = "<group>"; };
+		C841F183454B70886065923A /* TaskStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStart.swift; sourceTree = "<group>"; };
+		CC86D3E0858E49637882DD9C /* TresorClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TresorClient.swift; sourceTree = "<group>"; };
+		CC8D8E38EA706BCFDA5BE121 /* ChatPresenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPresenceView.swift; sourceTree = "<group>"; };
+		D59F9559EA71A37B40BDC6E9 /* AssistantSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantSections.swift; sourceTree = "<group>"; };
+		DC14473E98160A533062B48B /* ConnectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsView.swift; sourceTree = "<group>"; };
+		DEBEC1C5BDDB39E1EDAC56E9 /* AgentResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentResultsView.swift; sourceTree = "<group>"; };
+		DF5EBBA9B848AC6907485761 /* AssistantSectionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistantSectionsTests.swift; sourceTree = "<group>"; };
+		E08D4B0137793ECCF5826D0A /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		E120A946575CC4B54AC8E278 /* GoogleSignInClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInClient.swift; sourceTree = "<group>"; };
+		E3C79412EEEB282BD295A25A /* EverydaySetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverydaySetupView.swift; sourceTree = "<group>"; };
+		E587CC0DF73B9A3FB33CF1DF /* VoiceBindingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceBindingTests.swift; sourceTree = "<group>"; };
+		EFC92770A05AA6ECB05FABFD /* MessageComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageComposer.swift; sourceTree = "<group>"; };
+		F203C752DDDAA77F39D312EF /* PushCredentialImportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushCredentialImportTests.swift; sourceTree = "<group>"; };
+		F3917F25AD980597DC40DDF2 /* ProviderSwitchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderSwitchTests.swift; sourceTree = "<group>"; };
+		F6C1D776B04B7E69D9F96C80 /* PlannedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlannedView.swift; sourceTree = "<group>"; };
+		F737F796952DD4B7A3F62DA5 /* ConversationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationModel.swift; sourceTree = "<group>"; };
+		F9925206220EF538EDCFD192 /* VoiceFocusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceFocusTests.swift; sourceTree = "<group>"; };
+		FAFE30A89934FDEABA3371EA /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ios; path = .; sourceTree = SOURCE_ROOT; };
+		FBF4437B1819BE07D8FF3CC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FEFE4560B940E1BA257A8B0E /* TaskActionFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskActionFields.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		89948B5F4E49A66CF9D4F11A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92170F0C7643ECA2038630E5 /* SolvioApprovalsKit in Frameworks */,
+				1B9255C402249C5DCD1D31BF /* GoogleSignIn in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14814A0DE5CB3D2EB8A7B411 /* Presence */ = {
+			isa = PBXGroup;
+			children = (
+				CC8D8E38EA706BCFDA5BE121 /* ChatPresenceView.swift */,
+				952833BFD229F4B43B61F440 /* PresenceGallery.swift */,
+				B126C7409849C40E852451E3 /* PresenceModel.swift */,
+				95CA79997BC7FDDA7A4A8F5F /* PresenceRenderer.swift */,
+				8A7CE49FC08A86CEA2E6E640 /* SolvioPresenceView.swift */,
+			);
+			path = Presence;
+			sourceTree = "<group>";
+		};
+		1BDC4257A94CF84A08BF9D79 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A9DD65E9FF435806C2941DB1 /* SolvioApprovalsAppTests */,
+				E8FC483DC2FCE63F76535D9C /* SolvioApprovalsNavigationUITests */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		2A72A8D7135A0EC3E7EDBEC0 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				FAFE30A89934FDEABA3371EA /* ios */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		4FF1590F60DD5EB232BA9860 /* Wissen */ = {
+			isa = PBXGroup;
+			children = (
+				B381353EBE5D8EFA14165284 /* WissenDetailView.swift */,
+				BE2D521F274B8B21B33186CE /* WissenModel.swift */,
+				58721DC9A2FFBED0B49B7901 /* WissenView.swift */,
+			);
+			path = Wissen;
+			sourceTree = "<group>";
+		};
+		53A7ACF0BC78CB82A9CD8A41 /* Zahlungen */ = {
+			isa = PBXGroup;
+			children = (
+				4FBA3823BED4F15ABCB5AB5B /* PaymentApprovalCard.swift */,
+				7119CE5B63F5292D48226446 /* PaymentClient.swift */,
+				073AC01AAD2424089EC52883 /* PaymentModel.swift */,
+				87ECC77CB6B00A358731EB78 /* PaymentSheets.swift */,
+				198BF5D607A5928D0E393420 /* PaymentView.swift */,
+			);
+			path = Zahlungen;
+			sourceTree = "<group>";
+		};
+		8ED51909720BEED53E2538D4 = {
+			isa = PBXGroup;
+			children = (
+				B44D891E82EC945B4CE5265A /* App */,
+				2A72A8D7135A0EC3E7EDBEC0 /* Packages */,
+				1BDC4257A94CF84A08BF9D79 /* Tests */,
+				D85FFEB51B683E8122398EA3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9DD65E9FF435806C2941DB1 /* SolvioApprovalsAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD6CBA1470373E5EE4557AF5 /* AgentResultsModelTests.swift */,
+				DF5EBBA9B848AC6907485761 /* AssistantSectionsTests.swift */,
+				B59318457C51824E85FE4AA2 /* ChatLayoutTests.swift */,
+				873BE0C1C673E2FB277D8B06 /* ChatPresenceTests.swift */,
+				748A7834178E9058800A6B83 /* ChatVoiceHandoffTests.swift */,
+				05254798C5AAEF696E874E8C /* ConnectionsTests.swift */,
+				86FA5863BC42AE06D1D731CB /* ContactRefreshTests.swift */,
+				2D12138ACECAFB2D185805A0 /* ContactSourceTests.swift */,
+				38706E385DE3B1DB474C96F4 /* ConversationModelTests.swift */,
+				87D357522713B7657B126884 /* ConversationNetworkingTests.swift */,
+				6C16D40E88BF4C0A0EBC285C /* ConversationTextTests.swift */,
+				B4AE8E03EC238B0687F84BF4 /* GoogleSignInClientTests.swift */,
+				C5BBE199375A8C880759FCE5 /* MessageComposerTests.swift */,
+				309D878C9D451C49BC71C126 /* PaymentApprovalCardTests.swift */,
+				5179CB1C65F330AD5AEB7A5D /* PresenceModelTests.swift */,
+				F3917F25AD980597DC40DDF2 /* ProviderSwitchTests.swift */,
+				F203C752DDDAA77F39D312EF /* PushCredentialImportTests.swift */,
+				5B0A050767BAC0FFEC9550E8 /* PushTests.swift */,
+				41DECF32BF01D49DBB6D6B51 /* TaskCostApprovalModelTests.swift */,
+				BD57A90EE8183406FB61BDB6 /* TaskCostApprovalNetworkingTests.swift */,
+				4B1A9A0DC9D4E6F41643435C /* TaskFileModelTests.swift */,
+				1267F0D5D55C48AFFFBE1671 /* TaskFollowupModelTests.swift */,
+				B9427D7A8B207327F72E835C /* TaskHomeModelTests.swift */,
+				28316B99B5C9DC29B58AE586 /* TaskPortalModelTests.swift */,
+				390F24ECDD0A9AEB64FF65ED /* TresorRescopeFlowTests.swift */,
+				4CDCD68F4C236C7554182AED /* TresorScopeDiffTests.swift */,
+				E587CC0DF73B9A3FB33CF1DF /* VoiceBindingTests.swift */,
+				85F04565EAA7B669E1D228D8 /* VoiceDuplexTests.swift */,
+				F9925206220EF538EDCFD192 /* VoiceFocusTests.swift */,
+				6D1323CAE8427BCC6F68EB63 /* WissenModelTests.swift */,
+			);
+			path = SolvioApprovalsAppTests;
+			sourceTree = "<group>";
+		};
+		AF21C44B582B5E8C6A5100C1 /* Conversation */ = {
+			isa = PBXGroup;
+			children = (
+				7365D8806D05283FB7E9D74B /* ConversationListView.swift */,
+				F737F796952DD4B7A3F62DA5 /* ConversationModel.swift */,
+				58C2296DF834190409C6CA48 /* ConversationView.swift */,
+				EFC92770A05AA6ECB05FABFD /* MessageComposer.swift */,
+				6EC3BBB2315C5B3603FF5BF0 /* VoiceFocus.swift */,
+				74E7DA32DF043F5B36333E52 /* VoiceHandoff.swift */,
+			);
+			path = Conversation;
+			sourceTree = "<group>";
+		};
+		B44D891E82EC945B4CE5265A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				03BB11455FE5F03B29C052F7 /* ActionQuestion.swift */,
+				5E00A9387893938F7EC397B5 /* AgentResults.swift */,
+				DEBEC1C5BDDB39E1EDAC56E9 /* AgentResultsView.swift */,
+				C29C59718C673C800BB33C32 /* App.swift */,
+				2C8CC2DC947AC15C828C16A1 /* AppAttest.swift */,
+				1BF0C92526E6E07115F3E65D /* ApprovalDetailView.swift */,
+				1B40AC1BD6537B00E568C19F /* ApprovalsView.swift */,
+				B0B662D13503D9DEA4A959D2 /* Assets.xcassets */,
+				D59F9559EA71A37B40BDC6E9 /* AssistantSections.swift */,
+				DC14473E98160A533062B48B /* ConnectionsView.swift */,
+				50CDC84BAE14236B582BFB3F /* ContactRefreshModel.swift */,
+				E08D4B0137793ECCF5826D0A /* ContactsView.swift */,
+				B19E466AF5337AF147A13B2B /* ControlCenter.swift */,
+				5019C1FB04DB77E06716489B /* ControlCenterViews.swift */,
+				E3C79412EEEB282BD295A25A /* EverydaySetupView.swift */,
+				09D77BBB7240FBA6A313C5D8 /* GoogleConnectionView.swift */,
+				E120A946575CC4B54AC8E278 /* GoogleSignInClient.swift */,
+				C1DB9E732A701BE37B96716B /* HomeView.swift */,
+				04F0EDB1CAD6D95141AA4BA4 /* InboxView.swift */,
+				FBF4437B1819BE07D8FF3CC8 /* Info.plist */,
+				5CF500A3B510DCC9F24EAB8A /* Networking.swift */,
+				F6C1D776B04B7E69D9F96C80 /* PlannedView.swift */,
+				BFC2DD54A78B9FAF07204C22 /* PushNotifications.swift */,
+				8CF9F71B0BF8458659128923 /* QRScannerView.swift */,
+				8959B9523719205D310840AB /* Security.swift */,
+				10B8724F92B011B1B257803C /* SolvioApprovals.entitlements */,
+				945899BC650501A8B3F8E3E0 /* SystemView.swift */,
+				FEFE4560B940E1BA257A8B0E /* TaskActionFields.swift */,
+				B933E9BDC398F2BB3F538255 /* TaskCostApproval.swift */,
+				6CEC4570D5B52535DEC74C25 /* TaskCostApprovalPreview.swift */,
+				2A61DD5CC5D84D6E71D52F6E /* TaskFollowup.swift */,
+				7D8751B01BDCF50267587970 /* TaskHomeFields.swift */,
+				678EAFDBCE34D3BD7DF961F0 /* TaskPortalFields.swift */,
+				C841F183454B70886065923A /* TaskStart.swift */,
+				9D3CBE4DC0DBCDE3177E343D /* Theme.swift */,
+				9C610527DEF72A2A16561D40 /* VoiceAudio.swift */,
+				4802818368F65F72958AF616 /* VoiceSession.swift */,
+				B49977677CEDDA3EFC7DC06A /* VoiceTransport.swift */,
+				788C90816CDCB3AE41AEE5B5 /* VoiceView.swift */,
+				AF21C44B582B5E8C6A5100C1 /* Conversation */,
+				14814A0DE5CB3D2EB8A7B411 /* Presence */,
+				C1C8F2FCFC1D22D083E08CC5 /* Tresor */,
+				4FF1590F60DD5EB232BA9860 /* Wissen */,
+				53A7ACF0BC78CB82A9CD8A41 /* Zahlungen */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C1C8F2FCFC1D22D083E08CC5 /* Tresor */ = {
+			isa = PBXGroup;
+			children = (
+				3786651FC5C4A16C2C57D72F /* PushCredentialImport.swift */,
+				97D671944DCEF86D71162024 /* TresorAddSheet.swift */,
+				CC86D3E0858E49637882DD9C /* TresorClient.swift */,
+				659D925B7E1D270D3D661EB0 /* TresorModel.swift */,
+				378A30DEF4DA3564DFB76418 /* TresorScopeSheet.swift */,
+				835E339C932869034563ECB7 /* TresorView.swift */,
+			);
+			path = Tresor;
+			sourceTree = "<group>";
+		};
+		D85FFEB51B683E8122398EA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33BF417EA0F4249B43493F90 /* SolvioApprovals.app */,
+				4A3C6C18626630E97CB30A49 /* SolvioApprovalsAppTests.xctest */,
+				55291D89439BAE995D7D1FAF /* SolvioApprovalsNavigationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E8FC483DC2FCE63F76535D9C /* SolvioApprovalsNavigationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4B1B145A04D7CF32CEC00EEB /* ApprovalNavigationTests.swift */,
+			);
+			path = SolvioApprovalsNavigationUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A3444DE171F049F9EB25B0B /* SolvioApprovalsNavigationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 678EE1959CAC3010AE2A9079 /* Build configuration list for PBXNativeTarget "SolvioApprovalsNavigationUITests" */;
+			buildPhases = (
+				A75E5A97B4E99C615C55D47E /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61D029BC34FE0F717E00D7B0 /* PBXTargetDependency */,
+			);
+			name = SolvioApprovalsNavigationUITests;
+			packageProductDependencies = (
+			);
+			productName = SolvioApprovalsNavigationUITests;
+			productReference = 55291D89439BAE995D7D1FAF /* SolvioApprovalsNavigationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		3E208786BCFB29374A343312 /* SolvioApprovals */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7FFD723F21604C1A2633A31 /* Build configuration list for PBXNativeTarget "SolvioApprovals" */;
+			buildPhases = (
+				9311887B7A217AEDFA0C7BDD /* Sources */,
+				6C28D9BB11D5CF8DFBB4D727 /* Resources */,
+				89948B5F4E49A66CF9D4F11A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SolvioApprovals;
+			packageProductDependencies = (
+				AF7295BE6F61214880673262 /* SolvioApprovalsKit */,
+				C68DB9CCDDF65A4C3583A37F /* GoogleSignIn */,
+			);
+			productName = SolvioApprovals;
+			productReference = 33BF417EA0F4249B43493F90 /* SolvioApprovals.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E9993C180D53F7A4F225D211 /* SolvioApprovalsAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 658369B62A357BD768F14207 /* Build configuration list for PBXNativeTarget "SolvioApprovalsAppTests" */;
+			buildPhases = (
+				AF06F207DCAB4A9C4D3C906C /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DD5E74E3E85BE77A1965CAA /* PBXTargetDependency */,
+			);
+			name = SolvioApprovalsAppTests;
+			packageProductDependencies = (
+			);
+			productName = SolvioApprovalsAppTests;
+			productReference = 4A3C6C18626630E97CB30A49 /* SolvioApprovalsAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83FB430A3C56AB141839CB36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					3A3444DE171F049F9EB25B0B = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+						TestTargetID = 3E208786BCFB29374A343312;
+					};
+					3E208786BCFB29374A343312 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					E9993C180D53F7A4F225D211 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 07A64ECFCA43E7F00C37F198 /* Build configuration list for PBXProject "SolvioApprovals" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 8ED51909720BEED53E2538D4;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				AFB8924DB833FF688171184F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				4C404A770B34E2277C06E05B /* XCLocalSwiftPackageReference "." */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D85FFEB51B683E8122398EA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E208786BCFB29374A343312 /* SolvioApprovals */,
+				E9993C180D53F7A4F225D211 /* SolvioApprovalsAppTests */,
+				3A3444DE171F049F9EB25B0B /* SolvioApprovalsNavigationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6C28D9BB11D5CF8DFBB4D727 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				893D39109ACEB763406F1749 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9311887B7A217AEDFA0C7BDD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9A7A845148B0F219262A5AC /* ActionQuestion.swift in Sources */,
+				6369AF7895C2BDED969AC429 /* AgentResults.swift in Sources */,
+				D516747103E34CF53FCFA834 /* AgentResultsView.swift in Sources */,
+				A20BBC36E1B2B28159242F99 /* App.swift in Sources */,
+				9F507D2AF79B6677B2BD7C0F /* AppAttest.swift in Sources */,
+				A4E5F01DA7469D3C68DA8C22 /* ApprovalDetailView.swift in Sources */,
+				46698A80A0391F25E5917838 /* ApprovalsView.swift in Sources */,
+				89D4DE72808ADF6CA4CCBD2D /* AssistantSections.swift in Sources */,
+				71E04E088B4C183C3861AABC /* ChatPresenceView.swift in Sources */,
+				8EA921D348F125531F14726B /* ConnectionsView.swift in Sources */,
+				EC5A39391413DE969AF98437 /* ContactRefreshModel.swift in Sources */,
+				1F29AC4A21231D9BC1A972EB /* ContactsView.swift in Sources */,
+				775777DD7A8D8D6F6FC88A78 /* ControlCenter.swift in Sources */,
+				1579DF228C021FD82D1D1FC5 /* ControlCenterViews.swift in Sources */,
+				1FD602054D78B0A01845881F /* ConversationListView.swift in Sources */,
+				35917451FD8DA179F4382806 /* ConversationModel.swift in Sources */,
+				6641609F98F0FA9CF1715C97 /* ConversationView.swift in Sources */,
+				3FE2263B333202BFE35711A8 /* EverydaySetupView.swift in Sources */,
+				457A7F7AA2572BF00F289B99 /* GoogleConnectionView.swift in Sources */,
+				BC1A10EE9ADD7260E684D4E0 /* GoogleSignInClient.swift in Sources */,
+				3183ACF44194492AF84FDB63 /* HomeView.swift in Sources */,
+				775EC31A4C1B9F6DABB32A13 /* InboxView.swift in Sources */,
+				D2806F2A8D07E0D61473FFA3 /* MessageComposer.swift in Sources */,
+				6B4E90CE366B5C4834E66530 /* Networking.swift in Sources */,
+				AF4D005F4AA14677CF4F71D4 /* PaymentApprovalCard.swift in Sources */,
+				7FC163DEB2A2FA4E371F7001 /* PaymentClient.swift in Sources */,
+				8896AE639FFD3BFE18471B0A /* PaymentModel.swift in Sources */,
+				16387607F0EE5B3439041884 /* PaymentSheets.swift in Sources */,
+				DD3D9B0BFF851E6FB5DD3EC6 /* PaymentView.swift in Sources */,
+				26CC9B312D258B6E918F4344 /* PlannedView.swift in Sources */,
+				A62D957E558E9C95F39B0A74 /* PresenceGallery.swift in Sources */,
+				575B2E805B0DDCE4153DAEB3 /* PresenceModel.swift in Sources */,
+				1CA59CF74B2B96D994A67F5B /* PresenceRenderer.swift in Sources */,
+				2D52C692DF844C6F7390CEB8 /* PushCredentialImport.swift in Sources */,
+				315B2DC08E2A7AB258CE86B3 /* PushNotifications.swift in Sources */,
+				375A2B79D1867F25BF4E2AA0 /* QRScannerView.swift in Sources */,
+				F644F47B03FED4C25E5CC0C8 /* Security.swift in Sources */,
+				A3B3FC7E30E9EAA8CD595D20 /* SolvioPresenceView.swift in Sources */,
+				95E07C26ABD51382B6AE1EB7 /* SystemView.swift in Sources */,
+				D10435211DC490EFF56BAA11 /* TaskActionFields.swift in Sources */,
+				D79C0EFE985F99723EC89E85 /* TaskCostApproval.swift in Sources */,
+				A84025B4B1EB44E2E3EF2274 /* TaskCostApprovalPreview.swift in Sources */,
+				AFE96A67CAEBAA9326CB1B38 /* TaskFollowup.swift in Sources */,
+				937E31D642FF56F03740532B /* TaskHomeFields.swift in Sources */,
+				17F88E20D84C9FF03A81912E /* TaskPortalFields.swift in Sources */,
+				006260A7F46E4FB7030A25CD /* TaskStart.swift in Sources */,
+				B719A9B044382D29FC56BB57 /* Theme.swift in Sources */,
+				F96593C24F4E7FE1F5D31D34 /* TresorAddSheet.swift in Sources */,
+				F8CF40ADB982E45A70281A4D /* TresorClient.swift in Sources */,
+				A9F355B3FA65462EA4AFA86F /* TresorModel.swift in Sources */,
+				DF3A952FF61094908E81055D /* TresorScopeSheet.swift in Sources */,
+				BCDBCE35F7156553312D6A04 /* TresorView.swift in Sources */,
+				13B4ACAA08658EEB8C31E983 /* VoiceAudio.swift in Sources */,
+				23DAD2742C0F1C2C8F835822 /* VoiceFocus.swift in Sources */,
+				6ADD6DFD1A828A97BBCEAA5E /* VoiceHandoff.swift in Sources */,
+				DE0F6F3CE87EAF50AA8FF02E /* VoiceSession.swift in Sources */,
+				18D3706688E4D23D6A8F4655 /* VoiceTransport.swift in Sources */,
+				CDED3BD170934C210F839453 /* VoiceView.swift in Sources */,
+				DC5769C4A69C3BCB66B3623B /* WissenDetailView.swift in Sources */,
+				3F1D03F5245628E0458594CF /* WissenModel.swift in Sources */,
+				31171BDD5DD3B68790F2188A /* WissenView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A75E5A97B4E99C615C55D47E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88F56C9CF54149DB96EA2034 /* ApprovalNavigationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF06F207DCAB4A9C4D3C906C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6504729B15E41A8DA869EA45 /* AgentResultsModelTests.swift in Sources */,
+				58987F5F35C0061DE89ECDC3 /* AssistantSectionsTests.swift in Sources */,
+				C49359FB8500070C0A9978F1 /* ChatLayoutTests.swift in Sources */,
+				B15F09D04EA3638528E3E556 /* ChatPresenceTests.swift in Sources */,
+				86FAAE98AFD4D3AE431C4F37 /* ChatVoiceHandoffTests.swift in Sources */,
+				5A52EC8133E988CC478E0E09 /* ConnectionsTests.swift in Sources */,
+				D755D782B046DDA408CA410E /* ContactRefreshTests.swift in Sources */,
+				133A780CF7D57DBFCDE9B4EB /* ContactSourceTests.swift in Sources */,
+				15E85D7C19AAA0EB798D6D6E /* ConversationModelTests.swift in Sources */,
+				6AC66C21BE787B5F17B53C2C /* ConversationNetworkingTests.swift in Sources */,
+				594B4F322D2410C1EFE0EE25 /* ConversationTextTests.swift in Sources */,
+				26CA8F72C6F8740210BA1772 /* GoogleSignInClientTests.swift in Sources */,
+				F9FA58A19C34DBD12457E36F /* MessageComposerTests.swift in Sources */,
+				B08F7ED85825265C3E36157D /* PaymentApprovalCardTests.swift in Sources */,
+				C6F70654EA1604598AB05C26 /* PresenceModelTests.swift in Sources */,
+				7EF108E0D159A732071C5FFE /* ProviderSwitchTests.swift in Sources */,
+				A3D2E0C0A80A7365BA01A52C /* PushCredentialImportTests.swift in Sources */,
+				23F033EBE78D1C14B62F9A8D /* PushTests.swift in Sources */,
+				F0006F6F4EADC4FE6AD52A25 /* TaskCostApprovalModelTests.swift in Sources */,
+				37241AB69A7037C0F0F73A59 /* TaskCostApprovalNetworkingTests.swift in Sources */,
+				E7AE7BE58A497AC077475550 /* TaskFileModelTests.swift in Sources */,
+				0E37621B3ACF47165E57D9FB /* TaskFollowupModelTests.swift in Sources */,
+				0672713B26F5AF6EC5D00C19 /* TaskHomeModelTests.swift in Sources */,
+				D8646B5BB7C9CD707366485B /* TaskPortalModelTests.swift in Sources */,
+				C0C892D8BC1AFF2425ACC4CF /* TresorRescopeFlowTests.swift in Sources */,
+				9EC4FEFAAAB248F5CC3318AC /* TresorScopeDiffTests.swift in Sources */,
+				649ED826ADA1045D29C39EF6 /* VoiceBindingTests.swift in Sources */,
+				34A6C01B6D59DFEF2A286F7B /* VoiceDuplexTests.swift in Sources */,
+				052E3D5B685F1715A7C6BAE8 /* VoiceFocusTests.swift in Sources */,
+				952AF7B014C1DE02C3675C94 /* WissenModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61D029BC34FE0F717E00D7B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E208786BCFB29374A343312 /* SolvioApprovals */;
+			targetProxy = 2D69674F57A93AA266AB7BFD /* PBXContainerItemProxy */;
+		};
+		7DD5E74E3E85BE77A1965CAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E208786BCFB29374A343312 /* SolvioApprovals */;
+			targetProxy = 4580B0A9FB0B144CCD73D629 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		17B6127F3ADFDC3230B1A5A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.solvio.approvals.navigationtests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = SolvioApprovals;
+			};
+			name = Debug;
+		};
+		2EF7C2FFD29617FE1ED3DEBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.solvio.approvals.apptests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SolvioApprovals.app/SolvioApprovals";
+			};
+			name = Debug;
+		};
+		314A89E7E71CAE2DA0E2D29F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/SolvioApprovals.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 36;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SOLVIO Nexus";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Scan the SOLVIO pairing QR code to pair this device.";
+				INFOPLIST_KEY_NSContactsUsageDescription = "SOLVIO gleicht Namen und Mailadressen mit deinen Kontakten ab, damit Nachrichten an die richtige Person gehen.";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Approve SOLVIO actions with Face ID.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Reach the SOLVIO approval gateway on your local network.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Damit du mit SOLVIO sprechen kannst. Das Mikrofon läuft nur während eines Gesprächs, das du selbst startest.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.solvio.approvals;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		34510E197888C51B978C127C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = App/SolvioApprovals.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 36;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "SOLVIO Nexus";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Scan the SOLVIO pairing QR code to pair this device.";
+				INFOPLIST_KEY_NSContactsUsageDescription = "SOLVIO gleicht Namen und Mailadressen mit deinen Kontakten ab, damit Nachrichten an die richtige Person gehen.";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Approve SOLVIO actions with Face ID.";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Reach the SOLVIO approval gateway on your local network.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Damit du mit SOLVIO sprechen kannst. Das Mikrofon läuft nur während eines Gesprächs, das du selbst startest.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = de.solvio.approvals;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		74B2F281B6C515EAF9C07E0D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		BAFE94DC30DB1519DDB4CC81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C26A78D9B3694A6CB07374F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.solvio.approvals.apptests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SolvioApprovals.app/SolvioApprovals";
+			};
+			name = Release;
+		};
+		D497ED7EAD5021D1CD642932 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = de.solvio.approvals.navigationtests;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = SolvioApprovals;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07A64ECFCA43E7F00C37F198 /* Build configuration list for PBXProject "SolvioApprovals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74B2F281B6C515EAF9C07E0D /* Debug */,
+				BAFE94DC30DB1519DDB4CC81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		658369B62A357BD768F14207 /* Build configuration list for PBXNativeTarget "SolvioApprovalsAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2EF7C2FFD29617FE1ED3DEBE /* Debug */,
+				C26A78D9B3694A6CB07374F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		678EE1959CAC3010AE2A9079 /* Build configuration list for PBXNativeTarget "SolvioApprovalsNavigationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17B6127F3ADFDC3230B1A5A7 /* Debug */,
+				D497ED7EAD5021D1CD642932 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C7FFD723F21604C1A2633A31 /* Build configuration list for PBXNativeTarget "SolvioApprovals" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				314A89E7E71CAE2DA0E2D29F /* Debug */,
+				34510E197888C51B978C127C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		4C404A770B34E2277C06E05B /* XCLocalSwiftPackageReference "." */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = .;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AFB8924DB833FF688171184F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = exactVersion;
+				version = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF7295BE6F61214880673262 /* SolvioApprovalsKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SolvioApprovalsKit;
+		};
+		C68DB9CCDDF65A4C3583A37F /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AFB8924DB833FF688171184F /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 83FB430A3C56AB141839CB36 /* Project object */;
+}

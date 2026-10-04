@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Template: replace REPLACE_ME with the local account before installation.
+     Set absolute repository/runtime/state paths and create log directories.
+     launchd arguments here are literal paths, not shell expressions.
+     Core defaults are loopback only; configure private LAN/overlay bindings explicitly. -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>de.solvio.offsite</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/REPLACE_ME/solvio-core/.venv/bin/python</string>
+        <string>-m</string>
+        <string>solvio.storage.offsite.job</string>
+    </array>
+    <key>WorkingDirectory</key>
+    <string>/Users/REPLACE_ME/solvio-core</string>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key><integer>7</integer>
+        <key>Minute</key><integer>30</integer>
+    </dict>
+
+    <key>StartInterval</key>
+    <integer>3600</integer>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <false/>
+
+    <key>ProcessType</key>
+    <string>Background</string>
+    <key>LowPriorityIO</key>
+    <true/>
+    <key>Nice</key>
+    <integer>10</integer>
+
+    <key>StandardOutPath</key>
+    <string>/dev/null</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/REPLACE_ME/.solvio/offsite/job.err.log</string>
+</dict>
+</plist>

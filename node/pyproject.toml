@@ -1,0 +1,20 @@
+[project]
+name = "solvio-node"
+version = "0.1.0"
+description = "SOLVIO generic node: capability-based remote compute worker (no shell)."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "aiohttp>=3.10",
+    "pydantic>=2.9",
+]
+
+[project.scripts]
+solvio-node = "solvio_node.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/solvio_node"]

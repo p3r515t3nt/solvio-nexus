@@ -1,0 +1,46 @@
+[project]
+name = "solvio-core"
+version = "0.1.0"
+description = "SOLVIO Core, zentraler Dienst des Sprachassistenten SOLVIO"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp>=3.10",
+    "websockets>=13.0",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.5",
+    "structlog>=24.4",
+    "cryptography>=50.0.0",
+    "cbor2>=6.1.4",
+    "pyrage>=1.4.0",
+]
+
+[project.scripts]
+solvio = "solvio.cli:main"
+# Trusted LOCAL control plane. Never an LLM/Realtime/Dispatcher tool and never a gateway
+# route: revocation must not be reachable by the model or by remote/web content.
+solvio-approval-admin = "solvio.security.mobile_approval.admin_cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/solvio"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+# M2: das lokale Einbettungsmodell fuer das Langzeitgedaechtnis. Als Extra und nicht
+# als Kernabhaengigkeit, weil es den gesamten Torch-Stack mitbringt — der Core laeuft
+# ohne, dann aber mit dem deterministischen Hashing-Provider, was in `health()` und im
+# Log ausdruecklich als degradiert ausgewiesen wird. Fuer den Produktivbetrieb ist
+# dieses Extra vorgesehen.
+embeddings = ["sentence-transformers>=3.0"]
+
+# P1A.4/H4: every P1A/F5/P0 security test is named `t_*`. Under pytest's default
+# `python_functions = test*` those ten suites collected ZERO tests and reported success.
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*", "t_*"]
+addopts = "-ra"

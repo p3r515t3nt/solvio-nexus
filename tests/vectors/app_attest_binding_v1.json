@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "domains": {
+    "enrollment": "SOLVIO_APP_ATTEST_ENROLLMENT_V1",
+    "decision": "SOLVIO_APP_ATTEST_DECISION_V1"
+  },
+  "enrollment": {
+    "binding": {
+      "protocol_version": 1,
+      "type": "app_attest_enrollment_binding",
+      "core_instance_id": "core-vec-0001",
+      "principal_id": "local-owner",
+      "device_id": "dev-vec-0001",
+      "enrollment_id": "enr-vec-0001",
+      "approval_key_id": "1122334455667788",
+      "approval_public_key_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "attestation_nonce": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "issued_at": 1723900000,
+      "expires_at": 1723900300
+    },
+    "canonical_bytes_hex": "7b22617070726f76616c5f6b65795f6964223a2231313232333334343535363637373838222c22617070726f76616c5f7075626c69635f6b65795f736861323536223a2261616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161222c226174746573746174696f6e5f6e6f6e6365223a2262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262626262222c22636f72655f696e7374616e63655f6964223a22636f72652d7665632d30303031222c226465766963655f6964223a226465762d7665632d30303031222c22656e726f6c6c6d656e745f6964223a22656e722d7665632d30303031222c22657870697265735f6174223a313732333930303330302c226973737565645f6174223a313732333930303030302c227072696e636970616c5f6964223a226c6f63616c2d6f776e6572222c2270726f746f636f6c5f76657273696f6e223a312c2274797065223a226170705f6174746573745f656e726f6c6c6d656e745f62696e64696e67227d",
+    "canonical_bytes_utf8": "{\"approval_key_id\":\"1122334455667788\",\"approval_public_key_sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"attestation_nonce\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\"core_instance_id\":\"core-vec-0001\",\"device_id\":\"dev-vec-0001\",\"enrollment_id\":\"enr-vec-0001\",\"expires_at\":1723900300,\"issued_at\":1723900000,\"principal_id\":\"local-owner\",\"protocol_version\":1,\"type\":\"app_attest_enrollment_binding\"}",
+    "client_data_hash_hex": "e9456c706a8033f4929deecd9f2580e3c9809ded76c5f90b6368c6e543d2660b"
+  },
+  "decision": {
+    "binding": {
+      "protocol_version": 1,
+      "type": "app_attest_decision_binding",
+      "core_instance_id": "core-vec-0001",
+      "approval_id": "ap-vec-0001",
+      "device_id": "dev-vec-0001",
+      "decision_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "challenge_nonce": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "approval_public_key_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "canonical_bytes_hex": "7b22617070726f76616c5f6964223a2261702d7665632d30303031222c22617070726f76616c5f7075626c69635f6b65795f736861323536223a2261616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161616161222c226368616c6c656e67655f6e6f6e6365223a2264646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464646464222c22636f72655f696e7374616e63655f6964223a22636f72652d7665632d30303031222c226465636973696f6e5f736861323536223a2263636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363636363222c226465766963655f6964223a226465762d7665632d30303031222c2270726f746f636f6c5f76657273696f6e223a312c2274797065223a226170705f6174746573745f6465636973696f6e5f62696e64696e67227d",
+    "canonical_bytes_utf8": "{\"approval_id\":\"ap-vec-0001\",\"approval_public_key_sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"challenge_nonce\":\"dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd\",\"core_instance_id\":\"core-vec-0001\",\"decision_sha256\":\"cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc\",\"device_id\":\"dev-vec-0001\",\"protocol_version\":1,\"type\":\"app_attest_decision_binding\"}",
+    "client_data_hash_hex": "653252bf67f41bf63d66e3853d9d3c3123b9aebe413a8c651abe59ae59674925"
+  },
+  "voice_session": {
+    "description": "Approval Policy V2 (ADR-0022): der Sitzungsbeweis des Sprachwegs. Eigener Domain-Separator — eine Sitzungs-Assertion darf nie als Entscheidungs-Assertion durchgehen. Beide Sprachen muessen BYTEGLEICH kanonisieren, sonst faellt das Telefon still auf die vorsichtige Freigabezeile zurueck, ohne dass es jemandem auffaellt.",
+    "domain": "SOLVIO_VOICE_SESSION_V1",
+    "binding": {
+      "core_instance_id": "core-0123456789abcdef",
+      "device_id": "dev-abc123",
+      "session_nonce": "0f1e2d3c4b5a69788796a5b4c3d2e1f0"
+    },
+    "canonical_bytes_hex": "7b22636f72655f696e7374616e63655f6964223a22636f72652d30313233343536373839616263646566222c226465766963655f6964223a226465762d616263313233222c2270726f746f636f6c5f76657273696f6e223a312c2273657373696f6e5f6e6f6e6365223a223066316532643363346235613639373838373936613562346333643265316630222c2274797065223a22766f6963655f73657373696f6e5f62696e64696e67227d",
+    "client_data_hash_hex": "41e03429e5ec937e840f69ef2ea83eb6fa12d85e568de94aedacc6c9f1a1312c"
+  },
+  "memory_mutation": {
+    "description": "Approval Policy V2 (ADR-0022): der Mutationsbeweis des WISSEN-Schreibwegs — eine App-Attest-Assertion je einzelner Mutation, gebunden an den SHA-256 der Handlung. Eigener Domain-Separator: eine Mutations-Assertion darf nie als Sitzungs- oder Entscheidungs-Assertion durchgehen. `payload_sha256` ist der SHA-256 der kanonischen Bytes von `payload` (sort_keys, kompakt, ensure_ascii=False, UTF-8) — der Umlaut im Statement ist Absicht und pinnt genau diese Kodierung. Beide Sprachen muessen BYTEGLEICH kanonisieren, sonst faellt jede Mutation mit 401 ab, ohne dass es an der Kryptografie laege.",
+    "domain": "SOLVIO_MEMORY_MUTATION_V1",
+    "binding": {
+      "protocol_version": 1,
+      "type": "memory_mutation_binding",
+      "core_instance_id": "core-vec-0001",
+      "device_id": "dev-vec-0001",
+      "nonce": "0f1e2d3c4b5a69788796a5b4c3d2e1f0",
+      "payload_sha256": "2724172e426912c90dde0c91ff0bb5b1fd13218727b7b020da812e1cd3476459"
+    },
+    "payload": {
+      "capability": "memory_forget",
+      "arguments": {
+        "memory_id": "mem-vec-0001",
+        "statement": "Gregor trinkt abends Grüntee"
+      }
+    },
+    "canonical_bytes_hex": "7b22636f72655f696e7374616e63655f6964223a22636f72652d7665632d30303031222c226465766963655f6964223a226465762d7665632d30303031222c226e6f6e6365223a223066316532643363346235613639373838373936613562346333643265316630222c227061796c6f61645f736861323536223a2232373234313732653432363931326339306464653063393166663062623562316664313332313837323762376230323064613831326531636433343736343539222c2270726f746f636f6c5f76657273696f6e223a312c2274797065223a226d656d6f72795f6d75746174696f6e5f62696e64696e67227d",
+    "canonical_bytes_utf8": "{\"core_instance_id\":\"core-vec-0001\",\"device_id\":\"dev-vec-0001\",\"nonce\":\"0f1e2d3c4b5a69788796a5b4c3d2e1f0\",\"payload_sha256\":\"2724172e426912c90dde0c91ff0bb5b1fd13218727b7b020da812e1cd3476459\",\"protocol_version\":1,\"type\":\"memory_mutation_binding\"}",
+    "client_data_hash_hex": "58179882eca59650f95fce20b08bff7a99b56b0c5443e0c9e6b921a9e3385160"
+  },
+  "payment_mutation": {
+    "description": "Payment Capability V1: der Handlungsbeweis des Zahlungswegs — eine App-Attest-Assertion je einzelner Handlung, gebunden an den SHA-256 der Handlung. EIGENER Domain-Separator: eine Zahlungs-Assertion darf nie als Tresor-, Wissens-, Sitzungs- oder Entscheidungs-Assertion durchgehen. `token_sha256` deckt den Anbieter-Token ab, der NICHT in den Argumenten reist. Beide Sprachen muessen BYTEGLEICH kanonisieren, sonst faellt jede Zahlung mit 401 ab, ohne dass es an der Kryptografie laege.",
+    "domain": "SOLVIO_PAYMENT_MUTATION_V1",
+    "binding": {
+      "protocol_version": 1,
+      "type": "payment_mutation_binding",
+      "core_instance_id": "core-vec-0001",
+      "device_id": "dev-vec-0001",
+      "nonce": "a1b2c3d4e5f60718293a4b5c6d7e8f90",
+      "payload_sha256": "9d544ad21671c8763ec4957819a93abca2d5ecfb969645ef3ea8481b68b7cb97"
+    },
+    "payload": {
+      "capability": "purchase_place",
+      "arguments": {
+        "vorgang": "pi-vec-0001",
+        "pruefsumme": "b7c1e0f2a3d45566"
+      },
+      "token_sha256": ""
+    },
+    "canonical_bytes_hex": "7b22636f72655f696e7374616e63655f6964223a22636f72652d7665632d30303031222c226465766963655f6964223a226465762d7665632d30303031222c226e6f6e6365223a226131623263336434653566363037313832393361346235633664376538663930222c227061796c6f61645f736861323536223a2239643534346164323136373163383736336563343935373831396139336162636132643565636662393639363435656633656138343831623638623763623937222c2270726f746f636f6c5f76657273696f6e223a312c2274797065223a227061796d656e745f6d75746174696f6e5f62696e64696e67227d",
+    "canonical_bytes_utf8": "{\"core_instance_id\":\"core-vec-0001\",\"device_id\":\"dev-vec-0001\",\"nonce\":\"a1b2c3d4e5f60718293a4b5c6d7e8f90\",\"payload_sha256\":\"9d544ad21671c8763ec4957819a93abca2d5ecfb969645ef3ea8481b68b7cb97\",\"protocol_version\":1,\"type\":\"payment_mutation_binding\"}",
+    "client_data_hash_hex": "85aa4ba714b913c8a3b718ffe76ef5fbd8f40c1dfa87be5366f2feabf1828db6"
+  }
+}

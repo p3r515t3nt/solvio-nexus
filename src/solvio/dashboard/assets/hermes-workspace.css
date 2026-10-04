@@ -1,0 +1,29 @@
+#solvio-workspace { color:#e6edf6; font:15px/1.6 system-ui,sans-serif; padding:18px; max-width:940px; margin:0 auto; overflow-wrap:anywhere; }
+#solvio-workspace *,#solvio-workspace *::before,#solvio-workspace *::after { box-sizing:border-box; }
+#solvio-workspace h1 { font-size:18px; margin:0; }
+#solvio-workspace h2 { font-size:16px; margin:8px 0; }
+#solvio-workspace p { margin:7px 0; }
+#solvio-workspace .workspace-picker { display:grid; gap:5px; margin-bottom:14px; }
+#solvio-workspace .workspace-picker select { width:100%; }
+#solvio-workspace .workspace-muted { color:#a0b2c7; }
+#solvio-workspace .workspace-header { display:flex; align-items:center; flex-wrap:wrap; gap:8px 14px; margin-bottom:12px; }
+#solvio-workspace .workspace-header>[role="status"] { flex-basis:100%; }
+#solvio-workspace .workspace-state { font-size:13px; font-weight:650; color:#afcbd9; margin:0; }
+#solvio-workspace .workspace-help { border-top:1px solid #294052; padding-top:12px; margin-top:14px; color:#a0b2c7; font-size:13px; }
+#solvio-workspace .workspace-help a { color:#7ecaff; margin-right:12px; display:inline-block; }
+#solvio-workspace details { border-top:1px solid #294052; padding:12px 0; margin-top:12px; }
+#solvio-workspace summary { cursor:pointer; font-weight:600; }
+#solvio-workspace [data-share-diagnostics] pre { white-space:pre-wrap; overflow-wrap:anywhere; font-size:.85rem; }
+#solvio-workspace ol { margin:10px 0; padding-left:22px; }
+#solvio-workspace li { margin:8px 0; }
+#solvio-workspace .workspace-controls { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0; }
+#solvio-workspace button,#solvio-workspace select { color:inherit; background:#15293e; border:1px solid #35536d; border-radius:8px; padding:9px 12px; max-width:100%; font:inherit; }
+#solvio-workspace button:disabled { opacity:.55; }
+#solvio-workspace video { max-width:100%; width:100%; max-height:550px; background:#050b11; }
+#solvio-workspace [hidden],#root[hidden] { display:none!important; }
+#root .native-origin,#root .native-state,#root .solvio-native-viewer>h1 { display:none; }
+@media(max-width:420px){#solvio-workspace {padding:12px;}#solvio-workspace .workspace-controls>button {flex:1 1 180px;}}
+/* The upstream SPA opts into document-navigation screenshots. This embedded
+ * private reader is replaced on task change/logout; it must not retain an
+ * outgoing task's visual transition across that boundary. */
+@view-transition { navigation:none; }

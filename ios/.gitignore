@@ -1,0 +1,9 @@
+.build/
+.swiftpm/
+DerivedData/
+build/
+*.xcuserstate
+xcuserdata/
+.DS_Store
+SolvioApprovals.xcodeproj/
+*.xcodeproj

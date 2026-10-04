@@ -1,0 +1,51 @@
+[Unit]
+Description=SOLVIO node (compute-only capability worker)
+Documentation=https://github.com/p3r515t3nt/solvio-core
+After=network-online.target wg-quick@wg0.service
+Wants=network-online.target
+Requires=wg-quick@wg0.service
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=solvio-node
+Group=solvio-node
+WorkingDirectory=/opt/solvio-node
+Environment=SOLVIO_NODE_CONFIG=/etc/solvio-node/config.json
+Environment=PYTHONPATH=/opt/solvio-node/src
+Environment=SOLVIO_NODE_STDERR=1
+Environment=SOLVIO_SEARCH_PROVIDER=brave
+LoadCredential=brave_token:/etc/solvio-node/secrets/brave_token
+ExecStart=/opt/solvio-node/.venv/bin/python -m solvio_node.server
+Restart=on-failure
+RestartSec=3
+
+# --- hardening ---
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/solvio-node
+ReadOnlyPaths=/etc/solvio-node
+CapabilityBoundingSet=
+AmbientCapabilities=
+RestrictAddressFamilies=AF_INET AF_INET6
+RestrictNamespaces=yes
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectKernelLogs=yes
+ProtectControlGroups=yes
+ProtectClock=yes
+ProtectHostname=yes
+RestrictRealtime=yes
+RestrictSUIDSGID=yes
+SystemCallArchitectures=native
+UMask=0077
+MemoryMax=512M
+TasksMax=64
+
+[Install]
+WantedBy=multi-user.target

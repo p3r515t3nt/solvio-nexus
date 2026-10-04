@@ -1,0 +1,20 @@
+:root {color-scheme:dark;--background:#07101c;--foreground:#e6edf6;--muted-foreground:#a0b2c7;--dt-background:#07101c;--dt-foreground:#e6edf6;--dt-muted-foreground:#a0b2c7;--ui-text-secondary:#b4c2d4;--ui-text-tertiary:#a0b2c7;--ui-chat-surface-background:#07101c;--conversation-line-height:1.6;--conversation-tool-font-size:14px;--conversation-scaffold-text:#b4c2d4;--conversation-scaffold-meta:#a0b2c7;--thread-last-message-clearance:12px;--composer-measured-height:0px;--thread-viewport-height:100%;font-family:system-ui,sans-serif;}
+html,body,#root {height:auto;overflow:visible;}
+body {margin:0;min-height:100vh;background:#07101c;color:#e6edf6;user-select:text;}
+.solvio-desktop-view {max-width:100%;box-sizing:border-box;font-size:15px;line-height:1.65;overflow-wrap:anywhere;}
+.solvio-desktop-thread {height:62vh;max-height:680px;min-height:300px;overflow:hidden;}
+.solvio-evidence-thread {height:48vh;max-height:480px;min-height:220px;overflow:hidden;}
+:is(.solvio-desktop-thread,.solvio-evidence-thread) [data-slot="aui_thread-content"] {padding:12px 2px!important;gap:14px;}
+.solvio-owner-message {width:100%;padding:14px;background:#13263a;border:1px solid #294052;border-radius:12px;white-space:pre-wrap;}
+.solvio-result-message {width:100%;padding:12px 0;font-size:15px;}
+.solvio-result-message a {color:#7ecaff;text-decoration:underline;}
+.solvio-result-message :is(h1,h2,h3) {font-size:17px;font-weight:650;margin:12px 0 8px;}
+.solvio-result-message p {margin:8px 0;}
+.solvio-result-message pre {max-width:100%;overflow:auto;}
+.solvio-message-label {color:#a0b2c7;font-size:12px;font-weight:650;margin:0 0 6px;}
+.solvio-tool-message {width:100%;min-width:0;border-left:2px solid #406787;padding-left:12px;}
+.solvio-tool-label {font-size:14px;overflow-wrap:anywhere;}
+.solvio-tool-message button {text-align:left;}
+.solvio-evidence {font-size:13px;padding:10px;background:#102033;border-radius:8px;}
+.solvio-evidence dt {color:#a0b2c7;margin-top:5px;}.solvio-evidence dd {margin:0;overflow-wrap:anywhere;}
+@media(max-width:420px){.solvio-desktop-thread {height:58vh;min-height:280px;}}

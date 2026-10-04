@@ -1,0 +1,61 @@
+{
+  "type": "object",
+  "required": [
+    "beantwortet",
+    "offen",
+    "fehlend",
+    "unsicher",
+    "weiterarbeit_noetig"
+  ],
+  "properties": {
+    "beantwortet": {
+      "type": "array",
+      "maxItems": 15,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "belege"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "belege": {
+            "type": "array",
+            "maxItems": 12,
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "offen": {
+      "type": "array",
+      "maxItems": 15,
+      "items": {
+        "type": "string"
+      }
+    },
+    "fehlend": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "string"
+      }
+    },
+    "unsicher": {
+      "type": "array",
+      "maxItems": 5,
+      "items": {
+        "type": "string"
+      }
+    },
+    "weiterarbeit_noetig": {
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}

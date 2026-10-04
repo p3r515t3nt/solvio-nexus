@@ -1,0 +1,1 @@
+var e=()=>{throw Error(`Desktop preview is unavailable in this read-only view`)};export{e as openPreview};

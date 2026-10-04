@@ -1,0 +1,31 @@
+{
+  "_comment": "Beispiel-Registry fuer den Core Node-Layer (STEP 21.2E/F). Kopie nach config/nodes.json und Pfade anpassen. NUR Pfade zu Zertifikaten - NIEMALS Schluesselinhalte. config/nodes.json ist gitignored.",
+  "nodes": [
+    {
+      "node_id": "hetzner-main",
+      "display_name": "Hetzner Main (always-on remote worker)",
+      "endpoint": "https://node.example.invalid:8443",
+      "transport": "wireguard+mtls",
+      "protocol_version": 1,
+      "expected_capabilities": [
+        "system.health",
+        "compute.sha256",
+        "research.fetch_public_url",
+        "research.search_public_web"
+      ],
+      "availability_class": "always_on_remote",
+      "placement": "remote_datacenter",
+      "privacy_zone": "remote_controlled",
+      "priority": 100,
+      "enabled": true,
+      "expected_identity": "hetzner-main",
+      "connect_timeout_s": 5.0,
+      "request_timeout_s": 25.0,
+      "tls": {
+        "ca_cert": "certs/nodes/ca.pem",
+        "client_cert": "certs/nodes/client.pem",
+        "client_key": "certs/nodes/client-key.pem"
+      }
+    }
+  ]
+}

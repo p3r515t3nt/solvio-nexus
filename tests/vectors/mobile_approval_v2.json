@@ -1,0 +1,176 @@
+{
+  "protocol_version": 2,
+  "description": "SOLVIO Mobile Approval Protocol V2 golden vectors (TEST keys only).",
+  "curve": "P-256",
+  "hash": "SHA-256",
+  "sig_encoding": "DER",
+  "pubkey_encoding": "x963-uncompressed",
+  "mac_pubkey_x963_b64": "BPkU1OhKrFbjj/lI7/YjtSwgu6BWBKL7tgI51sbplJLeGaWO8o4P8E842KAEw9y97clTiQZ3ldtrMPjJkvjVrXM=",
+  "device_pubkey_x963_b64": "BHlq97W3Tf6ExctZHgkB0BqwTBpAl3J0PAUL1eEACfi21hcF/wfmk2zVmNuOBth2IPShM2oGkLfGARSvq6XqWqs=",
+  "golden_challenge_task": "Refactor auth middleware and delete legacy/session_v1.py",
+  "golden_challenge_human_summary": "Kleine Aufraeumarbeit im Projekt.",
+  "golden_challenge_payload_sha256": "42b08079838123601609e2f37144566e25173ee658325c39c43780040a753b12",
+  "signature_vectors": [
+    {
+      "name": "valid_challenge",
+      "note": "Mac-signed V2 challenge, must verify",
+      "pubkey_x963_b64": "BPkU1OhKrFbjj/lI7/YjtSwgu6BWBKL7tgI51sbplJLeGaWO8o4P8E842KAEw9y97clTiQZ3ldtrMPjJkvjVrXM=",
+      "key_id": "fa3fda2c7a1acf5b",
+      "payload_b64": "eyJhY3Rpb25fZGlnZXN0IjoiYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYSIsImFwcHJvdmFsX2lkIjoiYXAtZ29sZGVuIiwiY2hhbGxlbmdlX25vbmNlIjoibm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubiIsImNvcmVfaW5zdGFuY2VfaWQiOiJjb3JlLWdvbGRlbiIsImRldmljZV9pZCI6ImRldi1nb2xkZW4iLCJleHBpcmVzX2F0IjoxMTIwLCJodW1hbl9zdW1tYXJ5IjoiS2xlaW5lIEF1ZnJhZXVtYXJiZWl0IGltIFByb2pla3QuIiwiaXNzdWVkX2F0IjoxMDAwLCJtb2RlIjoibW9kaWZ5IiwicHJpbmNpcGFsX2lkIjoibG9jYWwtb3duZXIiLCJwcm90b2NvbF92ZXJzaW9uIjoyLCJ0YXNrIjoiUmVmYWN0b3IgYXV0aCBtaWRkbGV3YXJlIGFuZCBkZWxldGUgbGVnYWN5L3Nlc3Npb25fdjEucHkiLCJ0b29sX2lkIjoiY29kZXhfdGFzayIsInR5cGUiOiJhcHByb3ZhbF9jaGFsbGVuZ2UiLCJ3b3Jrc3BhY2UiOiIvVXNlcnMvc29sdmlvL3NvbHZpby1jb3JlIn0=",
+      "signature_b64": "MEQCIEvNo1fhPb09SQoC7dOJZK+MkgNNnxp/mZIONjnG3NwFAiBEr4sLEjyL8S/EpehE/hRD5ZUWY662I4g1xdAiUELi2w==",
+      "expect_valid": true
+    },
+    {
+      "name": "valid_challenge_unicode",
+      "note": "unicode/quotes/tab/newline/pipe/colon/backslash in fields",
+      "pubkey_x963_b64": "BPkU1OhKrFbjj/lI7/YjtSwgu6BWBKL7tgI51sbplJLeGaWO8o4P8E842KAEw9y97clTiQZ3ldtrMPjJkvjVrXM=",
+      "key_id": "fa3fda2c7a1acf5b",
+      "payload_b64": "eyJhY3Rpb25fZGlnZXN0IjoiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYmJiYiIsImFwcHJvdmFsX2lkIjoiYXAtdW5pIiwiY2hhbGxlbmdlX25vbmNlIjoidXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dXV1dSIsImNvcmVfaW5zdGFuY2VfaWQiOiJjb3JlLWdvbGRlbiIsImRldmljZV9pZCI6ImRldi1nb2xkZW4iLCJleHBpcmVzX2F0IjoyMTIwLCJodW1hbl9zdW1tYXJ5Ijoiw4RuZGVydW5nOiBcIlJFQURNRVwiIOKAlCDDvGJlclxuWmVpbGVuIiwiaXNzdWVkX2F0IjoyMDAwLCJtb2RlIjoibW9kaWZ5IiwicHJpbmNpcGFsX2lkIjoibG9jYWwtb3duZXIiLCJwcm90b2NvbF92ZXJzaW9uIjoyLCJ0YXNrIjoiw4RuZGVyZSBcIlJFQURNRVwiIOKAlCDDvGJlclxuWmVpbGVuLCDml6XmnKzoqp4sIGVtb2ppIPCfkY0sIGJhY2tzbGFzaCBcXCBlbmQiLCJ0b29sX2lkIjoiY29kZXhfdGFzayIsInR5cGUiOiJhcHByb3ZhbF9jaGFsbGVuZ2UiLCJ3b3Jrc3BhY2UiOiIvdG1wL3Byb2pla3QgXCJxdW90ZXNcIlx0VGFifHBpcGU6Y29sb24ifQ==",
+      "signature_b64": "MEMCIHCqaRObIydA14BQr/IS7Qh8EfBcouO8PdqWPgoIXOWLAh8bSmJO9WjD6mLkWERub49jOuVp6FVCzUoNGJvX0TxP",
+      "expect_valid": true
+    },
+    {
+      "name": "tampered_challenge_task",
+      "note": "TASK flipped after signing -> must NOT verify (F1 regression)",
+      "pubkey_x963_b64": "BPkU1OhKrFbjj/lI7/YjtSwgu6BWBKL7tgI51sbplJLeGaWO8o4P8E842KAEw9y97clTiQZ3ldtrMPjJkvjVrXM=",
+      "key_id": "fa3fda2c7a1acf5b",
+      "payload_b64": "eyJhY3Rpb25fZGlnZXN0IjoiYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYSIsImFwcHJvdmFsX2lkIjoiYXAtZ29sZGVuIiwiY2hhbGxlbmdlX25vbmNlIjoibm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubiIsImNvcmVfaW5zdGFuY2VfaWQiOiJjb3JlLWdvbGRlbiIsImRldmljZV9pZCI6ImRldi1nb2xkZW4iLCJleHBpcmVzX2F0IjoxMTIwLCJodW1hbl9zdW1tYXJ5IjoiS2xlaW5lIEF1ZnJhZXVtYXJiZWl0IGltIFByb2pla3QuIiwiaXNzdWVkX2F0IjoxMDAwLCJtb2RlIjoibW9kaWZ5IiwicHJpbmNpcGFsX2lkIjoibG9jYWwtb3duZXIiLCJwcm90b2NvbF92ZXJzaW9uIjoyLCJ0YXNrIjoiUmVmYWN0b3IgYXV0aCBtaWRkbGV3YXJlIGFuZCBkZWxldGUgbGVnYWN5L3Nlc3Npb25fdjkucHkiLCJ0b29sX2lkIjoiY29kZXhfdGFzayIsInR5cGUiOiJhcHByb3ZhbF9jaGFsbGVuZ2UiLCJ3b3Jrc3BhY2UiOiIvVXNlcnMvc29sdmlvL3NvbHZpby1jb3JlIn0=",
+      "signature_b64": "MEUCICsw3aZFxTO5lIkGatQ/J96h1qNqVnWN9aH8Tuc8A1D7AiEAwFi8ZofdJX+d20Ht7sKSGoKJtn01UNfl7zSB7ZQWDYw=",
+      "expect_valid": false
+    },
+    {
+      "name": "valid_decision",
+      "note": "device-signed V2 decision, must verify",
+      "pubkey_x963_b64": "BHlq97W3Tf6ExctZHgkB0BqwTBpAl3J0PAUL1eEACfi21hcF/wfmk2zVmNuOBth2IPShM2oGkLfGARSvq6XqWqs=",
+      "key_id": "371e0d49e0d29d23",
+      "payload_b64": "eyJhY3Rpb25fZGlnZXN0IjoiYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYSIsImFwcHJvdmFsX2lkIjoiYXAtZ29sZGVuIiwiY2hhbGxlbmdlX2V4cGlyZXNfYXQiOjExMjAsImNoYWxsZW5nZV9ub25jZSI6Im5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm4iLCJjaGFsbGVuZ2VfcGF5bG9hZF9zaGEyNTYiOiI0MmIwODA3OTgzODEyMzYwMTYwOWUyZjM3MTQ0NTY2ZTI1MTczZWU2NTgzMjVjMzljNDM3ODAwNDBhNzUzYjEyIiwiY29yZV9pbnN0YW5jZV9pZCI6ImNvcmUtZ29sZGVuIiwiZGVjaXNpb24iOiJBUFBST1ZFIiwiZGV2aWNlX2lkIjoiZGV2LWdvbGRlbiIsImlzc3VlZF9hdCI6MTAxMCwia2V5X2lkIjoiMzcxZTBkNDllMGQyOWQyMyIsInByaW5jaXBhbF9pZCI6ImxvY2FsLW93bmVyIiwicHJvdG9jb2xfdmVyc2lvbiI6MiwidHlwZSI6ImFwcHJvdmFsX2RlY2lzaW9uIn0=",
+      "signature_b64": "MEQCIC4rObSwTOFuoMgOy0tYeNzBZywIkFz7pVWs8pu4SV/zAiAWLfdyRjRili+tJJmPxhQQc8t3StXzfeKfpWESuMAY4w==",
+      "expect_valid": true
+    },
+    {
+      "name": "tampered_decision",
+      "note": "decision flipped -> must NOT verify",
+      "pubkey_x963_b64": "BHlq97W3Tf6ExctZHgkB0BqwTBpAl3J0PAUL1eEACfi21hcF/wfmk2zVmNuOBth2IPShM2oGkLfGARSvq6XqWqs=",
+      "key_id": "371e0d49e0d29d23",
+      "payload_b64": "eyJhY3Rpb25fZGlnZXN0IjoiYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYWFhYSIsImFwcHJvdmFsX2lkIjoiYXAtZ29sZGVuIiwiY2hhbGxlbmdlX2V4cGlyZXNfYXQiOjExMjAsImNoYWxsZW5nZV9ub25jZSI6Im5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm5ubm4iLCJjaGFsbGVuZ2VfcGF5bG9hZF9zaGEyNTYiOiI0MmIwODA3OTgzODEyMzYwMTYwOWUyZjM3MTQ0NTY2ZTI1MTczZWU2NTgzMjVjMzljNDM3ODAwNDBhNzUzYjEyIiwiY29yZV9pbnN0YW5jZV9pZCI6ImNvcmUtZ29sZGVuIiwiZGVjaXNpb24iOiJERU5ZeHh4IiwiZGV2aWNlX2lkIjoiZGV2LWdvbGRlbiIsImlzc3VlZF9hdCI6MTAxMCwia2V5X2lkIjoiMzcxZTBkNDllMGQyOWQyMyIsInByaW5jaXBhbF9pZCI6ImxvY2FsLW93bmVyIiwicHJvdG9jb2xfdmVyc2lvbiI6MiwidHlwZSI6ImFwcHJvdmFsX2RlY2lzaW9uIn0=",
+      "signature_b64": "MEQCIGud73e7vDMr5sMy1nj3whwBs6LYSq0PEv9bwR8+EXezAiAmbwdHAYZJ0vjNemcUXz5TzD2xp38G1GpJFkUxv0SRbA==",
+      "expect_valid": false
+    }
+  ],
+  "downgrade_vectors": [
+    {
+      "name": "v1_challenge_signature_valid_but_contract_rejected",
+      "note": "signature verifies; typed parse MUST fail (no silent downgrade to V1)",
+      "pubkey_x963_b64": "BPkU1OhKrFbjj/lI7/YjtSwgu6BWBKL7tgI51sbplJLeGaWO8o4P8E842KAEw9y97clTiQZ3ldtrMPjJkvjVrXM=",
+      "payload_b64": "eyJhY3Rpb25fZGlnZXN0IjoiY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjYyIsImFwcHJvdmFsX2lkIjoiYXAtdjEiLCJjaGFsbGVuZ2Vfbm9uY2UiOiJ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2IiwiY29yZV9pbnN0YW5jZV9pZCI6ImNvcmUtZ29sZGVuIiwiZXhwaXJlc19hdCI6MzEyMCwiaHVtYW5fc3VtbWFyeSI6IktsZWluZSBBdWZyYWV1bWFyYmVpdCBpbSBQcm9qZWt0LiIsImlzc3VlZF9hdCI6MzAwMCwibW9kZSI6Im1vZGlmeSIsInByaW5jaXBhbF9pZCI6ImxvY2FsLW93bmVyIiwicHJvdG9jb2xfdmVyc2lvbiI6MSwidG9vbF9pZCI6ImNvZGV4X3Rhc2siLCJ0eXBlIjoiYXBwcm92YWxfY2hhbGxlbmdlIiwid29ya3NwYWNlIjoiL3RtcC93cyJ9",
+      "signature_b64": "MEUCIHBLkMEVcX7Ig5VVas8PJPX7+MVki/XMn4aP4A/ikXLSAiEApGEekE8meLWrmBpfJEzAb0X48OV7uj/tx4PFd0LiLjU=",
+      "expect_signature_valid": true,
+      "expect_challenge_parse": false
+    }
+  ],
+  "display_vectors": [
+    {
+      "name": "plain_ascii",
+      "text": "Edit README.md",
+      "expect_safe": true
+    },
+    {
+      "name": "international",
+      "text": "Änderung 日本語 عربى 👍",
+      "expect_safe": true
+    },
+    {
+      "name": "tab_and_newline",
+      "text": "line1\nline2\tend",
+      "expect_safe": true
+    },
+    {
+      "name": "zwj_emoji_sequence",
+      "text": "👨‍👩‍👧",
+      "expect_safe": true,
+      "note": "ZWJ stays allowed (legitimate sequences)"
+    },
+    {
+      "name": "nul",
+      "text": "a\u0000b",
+      "expect_safe": false
+    },
+    {
+      "name": "carriage_return",
+      "text": "a\rb",
+      "expect_safe": false
+    },
+    {
+      "name": "bell",
+      "text": "a\u0007b",
+      "expect_safe": false
+    },
+    {
+      "name": "escape",
+      "text": "a\u001bb",
+      "expect_safe": false
+    },
+    {
+      "name": "del",
+      "text": "ab",
+      "expect_safe": false
+    },
+    {
+      "name": "c1_control",
+      "text": "ab",
+      "expect_safe": false
+    },
+    {
+      "name": "bidi_rlo",
+      "text": "a‮b",
+      "expect_safe": false
+    },
+    {
+      "name": "bidi_lro",
+      "text": "a‭b",
+      "expect_safe": false
+    },
+    {
+      "name": "bidi_lri",
+      "text": "a⁦b",
+      "expect_safe": false
+    },
+    {
+      "name": "bidi_rlm",
+      "text": "a‏b",
+      "expect_safe": false
+    },
+    {
+      "name": "bidi_alm",
+      "text": "a؜b",
+      "expect_safe": false
+    },
+    {
+      "name": "zwnbsp",
+      "text": "a﻿b",
+      "expect_safe": false
+    }
+  ],
+  "parse_vectors": [
+    {
+      "name": "valid_object",
+      "payload_b64": "eyJhIjoxLCJiIjoyfQ==",
+      "expect_parse": true
+    },
+    {
+      "name": "duplicate_keys",
+      "payload_b64": "eyJhIjoxLCJhIjoyfQ==",
+      "expect_parse": false
+    },
+    {
+      "name": "array_root",
+      "payload_b64": "WzEsMl0=",
+      "expect_parse": false
+    },
+    {
+      "name": "scalar_root",
+      "payload_b64": "NDI=",
+      "expect_parse": false
+    }
+  ]
+}

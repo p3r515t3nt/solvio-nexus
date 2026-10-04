@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>SOLVIO Nexus</title>
+  <link rel="icon" href="/dashboard/assets/solvio-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/dashboard/assets/app.css">
+  <script type="module" src="/dashboard/assets/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Zum Arbeitsbereich</a>
+  <div class="app-shell">
+    <div class="app-stage">
+      <header class="topbar">
+        <a class="brand" href="/dashboard/" aria-label="SOLVIO Nexus Start"><img src="/dashboard/assets/solvio-icon.svg" alt="" width="26" height="26"><span>SOLVIO <small>NEXUS</small></span></a>
+        <nav class="assistant-nav" aria-label="Hauptbereiche">
+          <button type="button" data-view="overview" aria-current="page">Chat</button>
+          <button type="button" data-view="feed">Überblick</button>
+          <button type="button" data-view="ideas">Ideen</button>
+          <button type="button" data-view="tasks">Aufgaben</button>
+          <button type="button" data-view="library">Bibliothek</button>
+        </nav>
+        <div class="connection"><span class="dot" id="connection-dot"></span><span id="connection">Verbindung wird geprüft</span></div>
+        <details id="workspace-menu" class="workspace-menu">
+          <summary aria-label="Menü öffnen">☰ Mehr</summary>
+          <div class="workspace-menu-body">
+            <nav class="primary-nav" aria-label="Weitere Bereiche">
+              <button type="button" data-view="connections">Verbindungen</button>
+              <button type="button" data-view="tasks" data-focus="approval-list">Freigaben</button>
+              <button type="button" data-view="knowledge">Gedächtnis &amp; Wissen</button>
+              <button type="button" data-view="activity">Aktivitäten</button>
+              <button type="button" data-view="inbox">Hinweise</button>
+              <button type="button" data-view="settings">Einstellungen</button>
+            </nav>
+            <details id="workroom-menu" class="room-menu"><summary>Arbeitsräume</summary>
+              <nav class="room-nav" aria-label="Arbeitsräume"><button type="button" data-room="hermes">Hermes</button><button type="button" data-room="obsidian">Obsidian</button></nav>
+            </details>
+            <button type="button" id="logout" class="quiet" hidden>Abmelden</button>
+          </div>
+        </details>
+      </header>
+      <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+      <div id="offline" class="offline" role="alert" hidden>
+        Verbindung unterbrochen. Die letzte Ansicht ist veraltet. Ein Auftrag kann im Core weiterlaufen.
+        <button type="button" id="reconnect">Neu verbinden</button>
+      </div>
+      <main id="main" tabindex="-1">
+    <section id="login-panel" class="login-layout">
+      <div class="login-copy"><p class="eyebrow">DEIN PERSÖNLICHER ARBEITSRAUM</p><h1>Alles an einem Ort.<br>Mit SOLVIO.</h1><p>Aufträge begleiten. Ergebnisse verstehen.<br>Wissen gemeinsam weiterentwickeln.</p>
+        <form id="login-form" class="login-form"><h2>Mit deinem Core verbinden</h2><p>Gib den einmaligen Anmeldecode ein, den dein Mac für dieses Dashboard erstellt hat.</p><label for="enrollment">Anmeldecode</label><input id="enrollment" type="password" required autocomplete="one-time-code" maxlength="100" spellcheck="false"><button class="primary" type="submit">Verbinden <span aria-hidden="true">→</span></button><p id="login-error" class="error" role="alert"></p></form>
+        <p class="small muted">Private Verbindung zu deinem Mac. Beim Öffnen dieser Seite wird kein Mikrofon eingeschaltet.</p>
+      </div>
+      <div id="presence-home" class="presence-slot">
+        <div id="presence" class="presence"><canvas id="orb" aria-hidden="true"></canvas><img id="mascot" src="/dashboard/assets/solvio-mascot.svg" alt="SOLVIO mit goldener Brille"><img id="glasses" src="/dashboard/assets/solvio-glasses.svg" alt="" aria-hidden="true"></div>
+      </div>
+    </section>
+        <div id="workspace" hidden>
+          <div class="workspace-heading">
+            <div><p class="eyebrow" id="environment">DEIN ARBEITSRAUM</p><h1 id="page-title">Was steht an?</h1></div>
+            <p class="freshness" id="freshness">Noch kein bestätigter Stand</p>
+          </div>
+          <section id="overview-view" class="home-view chat-view" aria-label="SOLVIO Chat">
+            <div class="chat-layout">
+              <section id="chat" class="chat" aria-label="Chatverlauf mit SOLVIO" tabindex="-1">
+                <div class="conversation-toolbar">
+                  <div id="chat-identity-home">
+                    <div id="conversation-welcome" class="chat-identity">
+                    <button type="button" id="presence-work" class="presence-slot presence-activity" data-view="tasks" aria-label="SOLVIO Aufträge und Fortschritt öffnen"></button>
+                    <div id="presence-caption"><p class="assistant-name">SOLVIO</p><h2 id="chat-title">Neuer Chat</h2><p id="presence-title" role="status" aria-live="polite">Ich bin bereit.</p><button type="button" id="presence-detail" class="presence-work-status" data-view="tasks" hidden></button></div>
+                  </div>
+                  </div>
+                  <div class="chat-header-actions">
+                    <details id="chat-list-panel" class="chat-list-panel"><summary>Chats</summary>
+                      <div class="chat-list-body"><p id="chat-list-summary" class="small muted"></p><nav id="chat-list" class="chat-list" aria-label="Chats"></nav><button type="button" id="chat-rename" class="quiet" hidden>Titel ändern</button></div>
+                    </details>
+                    <button type="button" id="new-chat" class="quiet" aria-label="Neuer Chat">Neuer Chat <span aria-hidden="true">＋</span></button>
+                  </div>
+                </div>
+                <section id="voice-focus" class="voice-focus" aria-label="Gespräch mit SOLVIO" tabindex="-1" hidden>
+                  <div id="voice-scene"></div>
+                  <div id="voice-focus-controls"></div>
+                </section>
+                <div id="chat-text-view" class="chat-text-view">
+                <div id="voice-return-status" class="boundary" role="status" hidden><p id="voice-return-message"></p><button type="button" id="voice-return-retry" class="quiet" hidden>Gesprächsverlauf erneut lesen</button></div>
+                <div id="chat-hint" class="boundary chat-hint" role="status" aria-live="polite" hidden></div>
+                <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+            <div id="voice-home" class="voice-home">
+          <section id="browser-voice" class="voice-controls" data-engaged="false" aria-labelledby="voice-heading">
+            <h3 id="voice-heading">Mit SOLVIO sprechen</h3>
+            <div class="voice-actions"><button type="button" id="voice-start" class="quiet" disabled aria-label="Mit SOLVIO sprechen">🎙 Mit SOLVIO sprechen</button><button type="button" id="voice-mute" aria-pressed="false" disabled>Stummschalten</button><button type="button" id="voice-interrupt" hidden>Antwort unterbrechen</button><button type="button" id="voice-end" class="danger" disabled>Beenden</button></div>
+            <p id="voice-local" role="status" aria-live="polite">Mikrofon in diesem Tab aus.</p><p id="voice-provider" class="small muted">Hier wurde noch kein Gespräch gestartet.</p><p id="voice-error" class="error" role="alert"></p>
+            <details class="voice-help"><summary>Über dieses Gespräch</summary><p class="small muted">Nur nach deinem Klick. Beenden schaltet das Mikrofon und die Wiedergabe aus. Angenommene Aufträge laufen unabhängig weiter.</p><p class="small muted">Gesprochene Gespräche nutzen die separate Realtime-Verbindung und können zusätzliche Sprachkosten verursachen.</p></details>
+          </section>
+            </div>
+                <form id="message-form" class="composer">
+                  <label for="message-text" class="visually-hidden">Schreib SOLVIO</label>
+                  <textarea id="message-text" rows="2" maxlength="4000" required placeholder="Schreib SOLVIO …"></textarea>
+                  <div class="composer-footer">
+                    <details id="document-options" class="composer-disclosure">
+                      <summary aria-label="Dateien anhängen">＋ Anhang</summary>
+                      <div id="document-field" class="document-field">
+                        <label for="document-file">Tabellen oder Dokument <span class="small muted">(optional)</span></label>
+                        <p id="document-help" class="small muted">Bis zu vier CSV-/XLSX-Tabellen, zusammen 8 MiB, für eine Übersicht mit Exceldatei, Diagramm und PDF. Oder ein Textdokument: RTF/TXT bis 64 KiB, DOCX/ODT bis 1 MiB. Die Verarbeitung erfolgt auf deinem Mac.</p>
+                        <input id="document-file" type="file" multiple accept=".csv,.xlsx,.rtf,.txt,.docx,.odt,text/csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/rtf,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.oasis.opendocument.text" aria-describedby="document-help document-status document-error">
+                        <button id="document-clear" type="button" class="quiet" hidden>Anhänge entfernen</button>
+                        <p id="document-status" class="small muted" role="status" aria-live="polite"></p>
+                        <p id="document-error" class="error" role="alert"></p>
+                      </div>
+                    </details>
+                    <button id="message-submit" type="submit" class="primary" aria-label="Nachricht senden">Senden ↑</button>
+                  </div>
+                  <p id="message-error" class="error" role="alert"></p>
+                </form>
+                </div>
+              </section>
+            </div>
+            <section id="home-attention" class="home-section attention-section" aria-labelledby="home-attention-heading" hidden>
+              <h2 id="home-attention-heading">Braucht deine Entscheidung</h2>
+              <div id="home-attention-list"></div>
+            </section>
+            <details class="home-section activity-section"><summary>Letzte Aufträge</summary><section aria-labelledby="home-activity-heading">
+              <div class="section-heading"><h2 id="home-activity-heading">Zuletzt</h2><button type="button" data-view="tasks" class="quiet">Alle Aufträge <span aria-hidden="true">→</span></button></div>
+              <div id="home-activity-list"></div>
+            </section></details>
+            <details class="audio-panel">
+              <summary>Gespräch &amp; Mikrofon <span id="audio-summary">Status wird geladen</span></summary>
+              <p class="small muted">Agentenarbeit und Mikrofon sind unabhängig. Ein fertiger Auftrag beendet kein laufendes Gespräch.</p>
+              <div id="audio-details"></div>
+            </details>
+          </section>
+          <section id="tasks-view" class="wide-view tasks-view" aria-labelledby="tasks-heading" hidden>
+            <div class="view-intro"><div class="section-heading"><h2 id="tasks-heading">Deine Aufträge</h2><span id="task-count" class="count">—</span></div><p>Offene und zuletzt abgeschlossene Aufträge. Wähle einen aus, um Ergebnis, Quellen und Verlauf zu sehen.</p></div>
+            <section class="decisions" aria-labelledby="decisions-heading">
+              <h3 id="decisions-heading">Braucht dein OK</h3>
+              <div id="approval-list"><p class="empty">Freigaben werden geladen.</p></div>
+            </section>
+            <details id="task-entry" class="composer-disclosure task-entry"><summary>Neuer Auftrag mit Auftragsart</summary>
+            <div id="conversation-entry" class="conversation-entry">
+              <form id="task-form" class="composer">
+                <label for="objective">Was soll ich für dich erledigen?</label>
+                <textarea id="objective" rows="2" maxlength="4000" required placeholder="Schreibe deinen Auftrag …"></textarea>
+                <div class="composer-extras">
+                  <details id="task-options" class="composer-disclosure">
+                    <summary>Auftragsart &amp; Optionen</summary>
+                    <div class="composer-options">
+                      <label class="select-label">Aufgabe<select id="scope"><option value="research">Recherchieren / Lesen</option><option value="build">Programmieren</option><option value="action">Im Alltag erledigen</option></select></label>
+                      <label id="repository-label" class="select-label" hidden>Projekt<select id="repository"></select></label>
+                    </div>
+                    <p class="small muted">Dein Auftrag gilt direkt. Für Zusatzkosten gilt deine Fragegrenze. Dateien hängst du im Chat an.</p>
+                  </details>
+                </div>
+                <div id="action-entry" class="action-entry" hidden>
+                  <label class="select-label" for="action-mode">Angaben zum Auftrag</label>
+                  <select id="action-mode" aria-describedby="action-entry-help"><option value="natural">In eigenen Worten</option><option value="exact">Genaue Angaben eingeben</option></select>
+                  <p id="action-entry-help" class="small muted">Beschreibe oben einen Kalendertermin oder einen Mailentwurf. Falls etwas fehlt, fragt SOLVIO im selben Auftrag nach. Ein Mailentwurf wird nicht versendet.</p>
+                </div>
+                <div id="action-fields" hidden></div>
+                <div class="composer-footer">
+                  <span id="composer-mode" class="small muted">Recherchieren / Lesen</span>
+                  <button id="task-submit" type="submit" class="primary">Auftrag senden <span aria-hidden="true">↑</span></button>
+                </div>
+                <p id="task-error" class="error" role="alert"></p>
+              </form>
+            </div>
+            </details>
+            <div id="task-list" class="task-list"><p class="empty">Aufträge werden geladen.</p></div>
+            <section class="home-section" aria-labelledby="recurring-heading">
+              <div class="section-heading"><h3 id="recurring-heading">Geplante und regelmäßige Aufgaben</h3><button type="button" id="recurring-refresh" class="quiet">Aktualisieren</button></div>
+              <p class="small muted">Deine bestehenden Pläne und ihr zuletzt gelesener Stand. Hier kannst du die Einzelheiten nachlesen.</p>
+              <p id="recurring-status" class="small muted" role="status"></p><div id="recurring-list" class="memory-grid"></div>
+            </section>
+          </section>
+          <section id="detail-view" class="wide-view detail-view" aria-label="Auftrag und Ergebnis" hidden>
+            <button type="button" id="tasks-back" class="quiet back-button"><span aria-hidden="true">←</span> Zurück zu Aufträgen</button>
+            <h2 id="result-heading" class="visually-hidden">Ergebnis und Verlauf</h2>
+            <section id="conversation" class="conversation" aria-label="Dein Auftrag mit SOLVIO" tabindex="-1" hidden>
+              <div class="conversation-toolbar"><h2>Dein Auftrag</h2></div>
+              <article class="conversation-message conversation-user"><span class="message-author">Du</span><p id="conversation-objective"></p></article>
+              <article id="conversation-followup-message" class="conversation-message conversation-user" hidden><span class="message-author">Du · Folgeanweisung</span><p id="conversation-followup-text"></p></article>
+              <div class="conversation-answer"><span class="message-author">SOLVIO</span><div id="conversation-result"><div id="result"><div class="empty result-empty"><h3>Dein Auftrag im Blick.</h3><p>Wähle einen Auftrag, um seinen Stand, die Quellen und die nächsten Schritte zu sehen.</p></div></div></div></div>
+              <form id="followup-form" class="composer" hidden>
+                <label for="followup-text">Was soll ich daran weiterbearbeiten?</label>
+                <textarea id="followup-text" rows="2" maxlength="2000" required placeholder="Schreibe deine Folgeanweisung …"></textarea>
+                <details id="followup-files-options" class="composer-disclosure" hidden><summary>Ergebnisdateien verwenden</summary><p class="small muted">Wähle CSV-/XLSX-Tabellen aus diesem Ergebnis, insgesamt höchstens 8 MiB. Neue Dateien hängst du im Chat an.</p><div id="followup-files"></div></details>
+                <div class="composer-footer"><span class="small muted">Derselbe Auftrag und Kostenrahmen</span><button id="followup-submit" type="submit" class="primary">Weiterbearbeiten <span aria-hidden="true">↑</span></button></div>
+                <p id="followup-status" class="small" role="status" aria-live="polite"></p>
+              </form>
+              <button type="button" id="open-task-workroom" class="quiet workroom-link">Arbeitsraum öffnen <span aria-hidden="true">↗</span></button>
+            </section>
+          </section>
+          <section id="workroom-view" class="wide-view" hidden>
+            <div class="workroom-toolbar"><button type="button" data-view="overview" class="quiet">← Zu SOLVIO</button><div class="room-switcher" aria-label="Arbeitsraum wählen"><button type="button" data-room="hermes" aria-pressed="true">Hermes</button><button type="button" data-room="obsidian" aria-pressed="false">Obsidian</button></div></div>
+            <label class="search-label" for="workroom-task">Auftrag auswählen<select id="workroom-task"><option value="">Bitte einen Auftrag wählen</option></select></label>
+            <details id="workroom-controls" class="workroom-result"><summary>Ergebnis, Dateien &amp; Auftrag steuern</summary></details>
+            <section id="hermes-panel" class="room-panel" aria-label="Hermes-Arbeitsraum">
+              <p id="hermes-empty" class="empty">Wähle oben einen Auftrag.</p>
+              <iframe id="hermes-frame" title="Hermes-Nachrichtenansicht des gewählten SOLVIO-Auftrags" referrerpolicy="no-referrer" hidden></iframe>
+            </section>
+            <div id="obsidian-panel" class="room-panel" hidden>
+        <section id="window-share" class="surface desktop-preparation"><h3>Dein App-Fenster</h3><p>Sieh das am Mac ausgewählte Obsidian- oder Hermes-Fenster direkt hier. Nur Bild, kein Ton und keine Fernsteuerung. Die Fensterwahl gehört dir; der Browser erkennt den App-Namen nicht zuverlässig.</p><label>Fensterbereich<select aria-label="Fensterbereich"><option value="obsidian">Obsidian</option><option value="hermes">Hermes Desktop</option></select></label><div class="actions"><button type="button" data-share-watch>Fenster ansehen</button><button type="button" data-share-stop disabled>Aufnahme / Ansicht beenden</button></div><p data-share-status role="status"></p><video autoplay muted playsinline hidden aria-label="Freigegebenes App-Fenster"></video><details><summary>Am Mac: Fenster bereitstellen</summary><p>Öffne diese Dashboard-Adresse im Chrome-Browser auf dem Mac und melde dich an. Öffne Obsidian oder Hermes, wähle unten genau dessen Fenster und lass die Senderseite geöffnet. Auf dem Windows-Rechner klickst du auf „Fenster ansehen“. Ein Verlassen dieses Arbeitsraums beendet die lokale Freigabe beziehungsweise Ansicht.</p><button type="button" data-share-publish>Fenster auf diesem Rechner auswählen</button></details><p class="small muted">Direkte Verbindung zwischen deinen angemeldeten Browsern. Keine Aufzeichnung, keine Übertragung an einen KI-Anbieter. Änderungen an persönlichen Erinnerungen erfolgen oben im gemeinsamen Wissen.</p></section>            </div>
+            <details id="workroom-knowledge" class="surface workroom-knowledge"><summary>Wissen daneben</summary><p class="small muted">Durchsuche den aktuellen gemeinsamen Bestand. Korrekturen gelten im Core.</p></details>
+          </section>
+      <section id="knowledge-view" class="wide-view" hidden><div class="view-intro"><h2>Was SOLVIO über dich weiß.</h2><p>Aktuelle Erinnerungen, ihre Herkunft und offene Vermutungen. Der Core führt den gemeinsamen Bestand.</p></div><details class="surface"><summary>Persönliches Lernen</summary><p id="learning-status">Noch kein bestätigter Stand</p><div id="learning-list" class="memory-grid"></div></details><div id="memory-home"><div id="memory-browser"><label class="search-label" for="memory-search">Erinnerungen durchsuchen<input type="search" id="memory-search" placeholder="Nach Inhalt oder Thema suchen"></label><p id="memory-summary" class="small muted"></p><div id="memory-list" class="memory-grid"></div></div></div><h2 class="subheading">Noch zu klären</h2><div id="candidate-list" class="memory-grid"></div><h2 class="subheading">Deine letzten Wissensänderungen</h2><p class="small muted">Der bestätigte Abschluss kommt aus dem Core. Ein ungewisser Ausgang wird nicht automatisch wiederholt.</p><div id="memory-commands"></div></section>
+      <section id="feed-view" class="wide-view" hidden><div class="view-intro"><h2>Dein Überblick</h2><p>Tagesübersicht, Ergebnisse und wichtige Hinweise von SOLVIO.</p></div><div id="feed-list"></div></section>
+      <section id="ideas-view" class="wide-view" hidden><div class="view-intro"><h2>Für dich</h2><p>Nächste Schritte aus deinen Aufgaben. Du entscheidest, was SOLVIO weiterbearbeitet.</p></div><div id="personal-ideas-list" class="memory-grid"></div><div class="view-intro ideas-examples"><h2>Etwas Neues beginnen</h2><p>Anregungen für neue Themen. Im Chat anpassen und senden.</p></div><div id="ideas-list" class="memory-grid"></div></section>
+      <section id="library-view" class="wide-view" hidden><div class="view-intro"><h2>Deine Bibliothek</h2><p>Ergebnisse und Dateien deiner Aufträge. Die Suche berücksichtigt auch ältere gespeicherte Ergebnisse.</p></div><label for="library-search">Ergebnis oder Datei suchen</label><input id="library-search" type="search" maxlength="200" placeholder="Bibliothek durchsuchen"><button id="library-refresh" type="button">Aktualisieren</button><p id="library-status" role="status"></p><div id="library-list" class="memory-grid"></div><button id="library-more" type="button" hidden>Ältere Ergebnisse laden</button></section>
+      <section id="inbox-view" class="wide-view" hidden><div class="view-intro"><h2>Nachrichten von SOLVIO.</h2><p>Ergebnisse und Hinweise, auch wenn dein Gespräch schon vorbei ist.</p></div><div id="inbox-list"></div></section>
+      <section id="activity-view" class="wide-view" aria-labelledby="activity-heading" hidden>
+        <div class="view-intro"><div class="section-heading"><h2 id="activity-heading">Aktivitäten</h2><button type="button" id="activity-refresh" class="quiet">Aktualisieren</button></div><p>Die zuletzt gespeicherten Ereignisse zu geplanten Aufgaben, Freigaben und Systemmeldungen. Agentenaufträge findest du unter Aufgaben.</p></div>
+        <p id="activity-status" class="small muted" role="status"></p><div id="activity-list" class="memory-grid"></div>
+      </section>
+      <section id="connections-view" class="wide-view" aria-label="Verbindungen" hidden>
+        <div class="view-intro"><h2>Deine Dienste für SOLVIO</h2><p>Deine verbundenen Dienste und ihr zuletzt geprüfter Stand.</p></div>
+        <div id="connection-list" class="memory-grid"></div>
+        <section class="surface"><h3>Kontakte</h3><p>Der Abgleich erfolgt auf deinem iPhone: SOLVIO → Verbindungen → Kontakte. Dort kannst du Kontakte freigeben, aktualisieren und übertragene Suchdaten entfernen.</p></section>
+        <section class="surface"><h3>Anmeldungen verwalten</h3><p>Gmail und Google Kalender verwenden den bestehenden Google-Zugang auf deinem SOLVIO Mac. Neue Anmeldung und Trennen dieses Zugangs sind im Dashboard noch nicht verfügbar.</p><p class="small muted">Weitere Mailanbieter sind noch nicht eingerichtet. Keine Passwörter im Chat teilen.</p></section>
+      </section>
+      <section id="settings-view" class="wide-view" hidden><div class="view-intro"><h2>Du bestimmst den Rahmen.</h2><p>Deine laufenden Pläne und ihre Grenzen bleiben sichtbar.</p></div><div class="settings-grid"><section class="surface"><h3>Zusätzliche KI- und Werkzeugkosten</h3><p>Ab dieser Summe je neuem Auftrag fragt SOLVIO vorher. Dein Monatsabo zählt nicht dazu. Käufe richten sich nach dem beauftragten Kaufbudget.</p><form id="cost-form"><label for="threshold">Vorher fragen ab (Euro)</label><input id="threshold" type="number" min="0" step="0.01" required><button class="primary" type="submit">Grenze speichern</button><p id="cost-message" class="small" role="status"></p></form><p class="small muted">Bereits angelegte Aufträge behalten ihre vereinbarte Grenze.</p></section><section class="surface"><h3>Abos &amp; Kontingente</h3><p>Es gilt der jeweils gebuchte Plan. Bei einem Limit entscheidest du: warten, den Plan erweitern oder den Anbieter wechseln.</p><p id="quota-status" class="status-line">Kontingent nicht gemessen</p><p class="small muted">Keine automatische Umschaltung auf einen anderen Anbieter oder eine kostenpflichtige API.</p><h3>ChatGPT-Credits</h3><div id="native-credit-settings"></div><h3>Kostenprüfung</h3><p id="cost-control-status">Noch kein bestätigter Stand</p></section></div><h2 class="subheading">Dienste</h2><p class="small muted">Letzte vorhandene Betriebsprüfung. Das Öffnen dieser Ansicht startet keine Anbieterprüfung.</p><div id="component-list" class="memory-grid"></div></section>
+          <div id="voice-dock" class="voice-dock" hidden></div>
+        </div>
+      </main>
+      <footer><span>Persönlich. Verbunden. Unter deiner Kontrolle.</span><span id="footer-state">SOLVIO Nexus · Privater Zugang</span></footer>
+    </div>
+  </div>
+  <dialog id="decision-dialog"><form method="dialog"><button class="dialog-close quiet" aria-label="Schließen">×</button></form><div id="decision-content"></div><div id="voice-dialog" class="voice-dialog" hidden></div></dialog>
+  <noscript>Bitte aktiviere JavaScript, um dich anzumelden und das Dashboard zu bedienen.</noscript>
+</body>
+</html>

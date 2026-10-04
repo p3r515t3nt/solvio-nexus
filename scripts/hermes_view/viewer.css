@@ -1,0 +1,15 @@
+@import 'tailwindcss';
+@import '@nous-research/ui/styles/fonts.css';
+@import '@nous-research/ui/styles/globals.css';
+@source '../../node_modules/@nous-research/ui/dist';
+:root{--foreground:#ffe6cb;--foreground-base:#ffe6cb;--foreground-alpha:1;--midground:#ffe6cb;--midground-base:#ffe6cb;--midground-alpha:1;--background:#041c1c;--background-base:#041c1c;--background-alpha:1;--radius:.5rem;color-scheme:dark}
+html,body{margin:0;min-height:100%;background:#041c1c;color:#ffe6cb;font:14px/1.55 system-ui,sans-serif}
+.solvio-native-viewer{padding:22px;overflow-wrap:anywhere}
+header{display:flex;justify-content:space-between;gap:12px;align-items:center;border-bottom:1px solid #315452;padding-bottom:14px}
+.native-brand{letter-spacing:.18em;font-size:20px;font-weight:700}
+.native-origin,header span+span{font-size:12px;color:#abd6cc}
+h1{font-size:19px;line-height:1.4;margin-top:22px}
+.native-state{color:#68d4ae}.native-result{border-top:1px solid #315452;margin-top:20px;padding-top:12px}.native-result p{white-space:pre-wrap}
+h2{font-size:15px}details{margin-top:20px;color:#abd6cc;font-size:12px}summary{cursor:pointer}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+.native-brand{flex-shrink:0;white-space:nowrap}@media(max-width:360px){header{flex-wrap:wrap;gap:6px}}

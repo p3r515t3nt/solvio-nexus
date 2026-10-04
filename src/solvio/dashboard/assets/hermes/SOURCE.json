@@ -1,0 +1,1065 @@
+{
+  "sources": {
+    "apps/desktop/src/components/pane-shell/pane-visibility.ts": "c1aec94e8466939cf4133f45cb6e9fb9c2c678ecef7f500ed7194702e7754f30",
+    "apps/desktop/src/lib/text.ts": "d2f9d5eee09038bcc70dda8e890d28c2d4ac855184106b2b7f724a65f5f91cd5",
+    "apps/desktop/src/lib/reasoning-effort.ts": "6d37a37531241b3329996e9d363ccb058858006ca3d883f2b62294f08bc6f309",
+    "apps/desktop/src/app/settings/field-copy.ts": "55e84fc8c967874d41070b7a4b29c8af648035061dee60f7ddbc716a0738251d",
+    "apps/desktop/src/app/settings/constants.ts": "ed58e7ace08fa6ed86f6044cb4d4ba8013f4c67fde619458be8db9e68166b6ba",
+    "apps/desktop/src/i18n/en.ts": "94511d9cb5ffb0410a594ac7e4546f4006bc2d440c8fdb82d3f49ab297db45e8",
+    "apps/desktop/src/i18n/define-locale.ts": "e5d0804a38cefb80d21da8d6e1014253eb7aa5031569c1566f4345b7137c088c",
+    "apps/desktop/src/i18n/ar.ts": "762570932c167293c0a741cb8195ee676ec06fe6435f6e65e4a57e0f3f049fe5",
+    "apps/desktop/src/i18n/ja.ts": "1e6ab73a1712fc72f226b2b5a1813cd78a9a3bc694158a8f4fc6730cb147dd06",
+    "apps/desktop/src/i18n/zh.ts": "aab110266b1ea02bfe109da10fa7733f38d95ac51a63ad82b4c231dacd838925",
+    "apps/desktop/src/i18n/zh-hant.ts": "fbb49a8b7ee330311d68ab41c1684da358757d617ce1d6d650608301d30fe2a4",
+    "apps/desktop/src/i18n/catalog.ts": "4aa112caad98de58215fa4603c4115be9dbbf9d57990c8848b97b51a4001b2a3",
+    "apps/desktop/src/i18n/languages.ts": "de680f320df068eea12623f4c7fc8bd5781995ddfe86c7fcb385eefaf516ca1c",
+    "apps/desktop/src/i18n/runtime.ts": "84bb086452d473dac54366f549e81d973dc7bedffdaed4344c90ce5e92f8de35",
+    "apps/desktop/src/i18n/context.tsx": "70608dfdf2eafcf65eb3b01eeb0ed0f9ec66c45b6ff43336bbda0fb1259f6782",
+    "apps/desktop/src/i18n/plugin-i18n.ts": "52a84830af1a60690f846d2f14a4e37d1a252de0cf34fb0c56dfd57d4d62d32f",
+    "apps/desktop/src/i18n/index.ts": "ea889163b6911ddd6ade72bd680fac20ec15f34ed5828398d7cdf3ad02810417",
+    "apps/desktop/src/lib/tool-render-class.ts": "cda645dcd4988487cf7d72ef66ad3e1273742e7dfc52f9fb0cc4d8cd43286308",
+    "apps/desktop/src/lib/render-weight.ts": "79e5a29a91c00c64668bbe405f9747e7299cb08b14b7fb8a2ab9d2210e71a58a",
+    "apps/desktop/src/lib/utils.ts": "746e4d9beb1a5b6f0e047ec19d5f1c542c9f8117f4ea7c80d7b9bd0fe2128e91",
+    "apps/desktop/src/store/thread-scroll.ts": "9a2bce254caa7313bd096ebc1eb559c8884942ea5417474b04e777cc4b3254f0",
+    "apps/desktop/src/store/notifications.ts": "a44bc99d34d183a5ce86728ca746da43f28aa771a723edbce46331e2cd615904",
+    "apps/desktop/src/store/windows.ts": "5a136b09be4bcee6bdd4d06c5b9b767bd8b5d680241770de57690ee818293260",
+    "apps/desktop/src/components/assistant-ui/message-render-boundary.tsx": "a6c84de82bd8fab892d8dd132adf0f98c2b834ee281845d702b4f3f1464aa5de",
+    "apps/desktop/src/components/assistant-ui/thread/transcript-window.tsx": "79b7a189ff6950afa6c3622e71302a3180333a856f3f53c9de86e296f0dd7222",
+    "apps/desktop/src/components/assistant-ui/thread/list.tsx": "1989635d86bcb07692ae1d2f067a71a933af212df84949c0df788ed04c7a867f",
+    "apps/desktop/src/components/assistant-ui/thread/content.ts": "87cfdb1ee2acd54fbe6dd21e9eaac98ca6494c0405778c46abd3a9e5d2da6a1c",
+    "apps/desktop/src/store/display-timestamps.ts": "d7e0d5e151d5d720e05a83f71bb6e9b65853c22d1eeeff9b321543304de036b0",
+    "apps/desktop/src/lib/time.ts": "0dbcdd36d77d16ee26a4441144733c925d8d7e74825334823a51012b47c61fa9",
+    "apps/desktop/src/components/assistant-ui/thread/timestamp.ts": "2c210557bc3d072b506bcb512d15e0c0de29b14f3c034291f81d74b51dbaa2f4",
+    "apps/desktop/src/components/assistant-ui/thread/timeline-timestamp.tsx": "8b8d77742cd0fe9faf95918350e8b7c3154d4a2a61fd9ddd4381700260b210cb",
+    "apps/desktop/src/components/ui/codicon.tsx": "47a57d2f57f2660a18aaafee65ed8ceeda8aa65e9c9e04fd0d3d09d09bbd8761",
+    "apps/desktop/src/components/ui/disclosure-caret.tsx": "9e9babdde36fc5b3d1d62bcb4f6f67ddc1a203739effcb6616d6e845d3f38fb4",
+    "apps/desktop/src/components/chat/disclosure-row.tsx": "3055f85ec8f9e89b31f6e9f31064b84e12ecfc84e39b91ddcc4f64606064f0e0",
+    "apps/desktop/src/components/chat/scaffold-row.tsx": "369ff7cb59877281921da0a82aba4d04397ce862576458b334d7ee62b4fd2a45",
+    "apps/desktop/src/components/ui/tool-icon.tsx": "ba52306db657f7471f40334e5527e80121140174b009f65d2d2896b8019044ae",
+    "apps/desktop/src/lib/keybinds/combo.ts": "c407454fab0305941067b088b50536972a005df0403ceb1722e0de6e5ce97707",
+    "apps/desktop/src/lib/brand-icon.ts": "179d5ad3a00fc740cda69cef8ac6e2851e8d674554e0de186a5292370f9384cc",
+    "apps/desktop/src/lib/external-link.tsx": "ecc4ce61f1eff2251bf0dd1f586bc6d6a0ea7a6339ef3b63285b9cbc8e16c7e5",
+    "apps/desktop/src/components/assistant-ui/thread/system-message.tsx": "a2ab78f30594acd012824b0de71f411ca2f3f71d420fd841c9d69f84bd859e91",
+    "apps/desktop/src/styles.css": "f07630c7e79f050d4efe33b8c75b3e98d8a3a842eb010844e450725bd02bf14b",
+    "apps/desktop/solvio/viewer.css": "ed91a7e51036daade373b1731a4f099d92cfe8c67f01ac9c950e51801c84b427",
+    "apps/desktop/solvio/viewer.tsx": "22c7b873d5ffbbaedaf304324db6c76bb4badfda9f918dcd973841fadd405c35",
+    "apps/desktop/solvio/solvio-view.html": "a805dabf15cd25b6a76b781a35056f369e50612488500aec845c07a9801d83ef",
+    "apps/desktop/solvio/preview-closed.ts": "56073b150868e1a78c63c738f9efb0b627583f8f1f4a6c519e0e1cdaed8fe205"
+  },
+  "packages": {
+    "node_modules/@assistant-ui/tap": {
+      "name": "@assistant-ui/tap",
+      "version": "0.9.8",
+      "license": "MIT",
+      "package_sha256": "dc5a6c4de771d9af4083615315303c6620f6240603180723acb5eb9342a5695d",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/react": {
+      "name": "react",
+      "version": "19.2.7",
+      "license": "MIT",
+      "package_sha256": "51966ae9c8c377ff592b5d69c980966992101bc6791bf83a1e5c7ad9bcefa7f4",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/@assistant-ui/core": {
+      "name": "@assistant-ui/core",
+      "version": "0.2.23",
+      "license": "MIT",
+      "package_sha256": "f286d749f96a1e1099b1074f4f3d16b0b4336feff88f950cb75a72683f31fbf6",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/@assistant-ui/store": {
+      "name": "@assistant-ui/store",
+      "version": "0.2.22",
+      "license": "MIT",
+      "package_sha256": "6666982d487e20b6d93c3c996c055cbbd3f0fb3bb2ddc1a6d06fdd9425ee9644",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/use-effect-event": {
+      "name": "use-effect-event",
+      "version": "2.0.3",
+      "license": "MIT",
+      "package_sha256": "31e5bbcb3bf38bf9903228fbccecdf2e7d2db7d5c7798f9c2894a9ef4a27abad",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/zustand": {
+      "name": "zustand",
+      "version": "5.0.14",
+      "license": "MIT",
+      "package_sha256": "ba50e4360c27bd3e677be84c5f119b15e4c8b7890ececbb248f4f531d3a272c3",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/assistant-stream": {
+      "name": "assistant-stream",
+      "version": "0.3.31",
+      "license": "MIT",
+      "package_sha256": "015545179bc078f925fed2ae190fd088d0570b935fe3a927c7638e8a266092a1",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/secure-json-parse": {
+      "name": "secure-json-parse",
+      "version": "4.1.0",
+      "license": "BSD-3-Clause",
+      "package_sha256": "7d94f1bd83764dd08e8b7f4863cad4859383ecb757dbf8172627de02a71df031",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/nanoid": {
+      "name": "nanoid",
+      "version": "6.0.0",
+      "license": "MIT",
+      "package_sha256": "9d2c2520a7194e2cba631eb2e2687b8322bc084a6a96d4203451ec3343674be5",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/@assistant-ui/react": {
+      "name": "@assistant-ui/react",
+      "version": "0.14.24",
+      "license": "MIT",
+      "package_sha256": "7fcd9f061f07b68ab09346d97ca82c1342895557c170c18cbd2cbbcf36849a16",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/@radix-ui/react-compose-refs": {
+      "name": "@radix-ui/react-compose-refs",
+      "version": "1.1.5",
+      "license": "MIT",
+      "package_sha256": "9422da6cb4b0004d394d5f9f521ebd5ede2018400c857abf222dfe2061cfed0e",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/react-dom": {
+      "name": "react-dom",
+      "version": "19.2.7",
+      "license": "MIT",
+      "package_sha256": "447acd72cdb6a966d9db967729e286e7cbb4a09ea61fddd45e12c2a97fd4cfb6",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/@radix-ui/react-slot": {
+      "name": "@radix-ui/react-slot",
+      "version": "1.3.3",
+      "license": "MIT",
+      "package_sha256": "7c80787fcfec9659010411688e1b9e5de553a656b7935da5cfed8f1fc6db706e",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/@radix-ui/react-primitive": {
+      "name": "@radix-ui/react-primitive",
+      "version": "2.1.10",
+      "license": "MIT",
+      "package_sha256": "189895b89261cfbcd421a3488ea052eeb5d09b83f709172cec202be92e03b63a",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/@radix-ui/primitive": {
+      "name": "@radix-ui/primitive",
+      "version": "1.1.7",
+      "license": "MIT",
+      "package_sha256": "c8776f615ee911517a19670827761383bc6be081d30955c523879a49fecc7093",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/@radix-ui/react-use-callback-ref": {
+      "name": "@radix-ui/react-use-callback-ref",
+      "version": "1.1.4",
+      "license": "MIT",
+      "package_sha256": "2c94e3ff04b459606223b72de419538f391295cb66f76c5bc5efe98a91edf51e",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/@assistant-ui/react-streamdown": {
+      "name": "@assistant-ui/react-streamdown",
+      "version": "0.3.5",
+      "license": "MIT",
+      "package_sha256": "bfb3c640a366752030c37c94f454c9a0c40570bfa54aa131efe0ea7b203bd5f9",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/remend": {
+      "name": "remend",
+      "version": "1.3.0",
+      "license": "Apache-2.0",
+      "package_sha256": "d8d5de8e70165199bf4fc46eb5758828d5206da35fe386e0ca4001f91e27e32f",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/unist-util-is": {
+      "name": "unist-util-is",
+      "version": "6.0.1",
+      "license": "MIT",
+      "package_sha256": "0838fa706c4cbda37f47ac4c915fab0b6be3c99aeeb81060d22ec6532fae6272",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/unist-util-visit-parents": {
+      "name": "unist-util-visit-parents",
+      "version": "6.0.2",
+      "license": "MIT",
+      "package_sha256": "6b00f27056337866d9206719b72a62c299a11903cdf622f307c92059723845e1",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/unist-util-visit": {
+      "name": "unist-util-visit",
+      "version": "5.1.0",
+      "license": "MIT",
+      "package_sha256": "98bf89a2331cae3cb26b4ad27a1cc78cb0f00edb9a7534491b111a34423e9a8a",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/rehype-harden": {
+      "name": "rehype-harden",
+      "version": "1.1.8",
+      "license": "MIT",
+      "package_sha256": "efbedd2e704005c5b5f12b9d0b2b4169f43aa361c7d18ac4393aa9a82b3b1541",
+      "licenses": [
+        "LICENSE.md"
+      ]
+    },
+    "node_modules/@ungap/structured-clone": {
+      "name": "@ungap/structured-clone",
+      "version": "1.3.3",
+      "license": "ISC",
+      "package_sha256": "b788dd5af217ffc1dc4e07aab670c3d2c702a8d95aeec3224b5810284ff9746c",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/devlop": {
+      "name": "devlop",
+      "version": "1.1.0",
+      "license": "MIT",
+      "package_sha256": "fbb56102cf3bd0e07a8075bfda80825b3ccd78a37642c92cef54a55fbed709dd",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/property-information": {
+      "name": "property-information",
+      "version": "7.2.0",
+      "license": "MIT",
+      "package_sha256": "6cacc66c65e31d11d9d4e5677c1375667faf334e585b69a9d319a0ca25676530",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/comma-separated-tokens": {
+      "name": "comma-separated-tokens",
+      "version": "2.0.3",
+      "license": "MIT",
+      "package_sha256": "c474231549263b0173a3d66f4fc1c4bac2c7517390b2a8e3f09ea1a1f401726b",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/hast-util-parse-selector": {
+      "name": "hast-util-parse-selector",
+      "version": "4.0.0",
+      "license": "MIT",
+      "package_sha256": "be420c013af4af1d5df47e294f44af6d7151a2e580f5a1a844a1228d73ee0278",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/space-separated-tokens": {
+      "name": "space-separated-tokens",
+      "version": "2.0.2",
+      "license": "MIT",
+      "package_sha256": "ca188b0d34a0cfcfa025597058c3302401155788219f78682243a34f8e5092f1",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/hastscript": {
+      "name": "hastscript",
+      "version": "9.0.1",
+      "license": "MIT",
+      "package_sha256": "067789acd022900bdaa254db04244c5e86bb2e7a060396525025ef365e15baa6",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/vfile-location": {
+      "name": "vfile-location",
+      "version": "5.0.3",
+      "license": "MIT",
+      "package_sha256": "b184de1be249393fe9c88056fca223ecc54fc94cbee4abf302a85f43eac6ccff",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/web-namespaces": {
+      "name": "web-namespaces",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "01486c106b32b1780308c8a0410bffac280760e9377b54f9fee82c19f3c16d1d",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/hast-util-from-parse5": {
+      "name": "hast-util-from-parse5",
+      "version": "8.0.3",
+      "license": "MIT",
+      "package_sha256": "37c50417c19084e1af73d47d838f1710c4bc0967effe2c205687d5806799fdb7",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/zwitch": {
+      "name": "zwitch",
+      "version": "2.0.4",
+      "license": "MIT",
+      "package_sha256": "01d215553746b3bd19ae5b31cab656830d38e40b6edea656b9b18256916cda0a",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/hast-util-to-parse5": {
+      "name": "hast-util-to-parse5",
+      "version": "8.0.1",
+      "license": "MIT",
+      "package_sha256": "5124aa89a201b78ddc242dff5fb45cdf8086300858adb94fc957ecb5fa15a776",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/html-void-elements": {
+      "name": "html-void-elements",
+      "version": "3.0.0",
+      "license": "MIT",
+      "package_sha256": "d891d652c57b77d4a14970d348bf99cb483b8074b835a5a9382d2936330ce049",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/parse5": {
+      "name": "parse5",
+      "version": "7.3.0",
+      "license": "MIT",
+      "package_sha256": "8196284780fe95c3245a40e3c17b45fc85ef709f1211775987d037e5e873fe95",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/entities": {
+      "name": "entities",
+      "version": "6.0.1",
+      "license": "BSD-2-Clause",
+      "package_sha256": "2b110e5a5a7a7bcbc843b885105a952630299cb1a7817b4b321d69479cfa7086",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/unist-util-position": {
+      "name": "unist-util-position",
+      "version": "5.0.0",
+      "license": "MIT",
+      "package_sha256": "dc3ad29ef3bd19907cbeeda81cf6ea872f15cfff319b4663c7206d16a2a1cf40",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/hast-util-raw": {
+      "name": "hast-util-raw",
+      "version": "9.1.0",
+      "license": "MIT",
+      "package_sha256": "479d312a8d01594cec7c5b051243985ffc9bfec40fc9df50143ac36065a34260",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/rehype-raw": {
+      "name": "rehype-raw",
+      "version": "7.0.0",
+      "license": "MIT",
+      "package_sha256": "b3313f6329e5b99fd26107f15d4a06bbd2644d1ee93f10fea5ee898be3248c05",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/hast-util-sanitize": {
+      "name": "hast-util-sanitize",
+      "version": "5.0.2",
+      "license": "MIT",
+      "package_sha256": "c0d256d8aa34d042cc20cae78f944eb53333d6e7d1724509996c81888ac43d0a",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/rehype-sanitize": {
+      "name": "rehype-sanitize",
+      "version": "6.0.0",
+      "license": "MIT",
+      "package_sha256": "b8c794050d76ff903a42c31e8f7a18e85e966cf231b67d9363a81c0dd5157465",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/ccount": {
+      "name": "ccount",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "007abbcac7038e503a221330fac2515793aa0dfba231b2d54734d2af76b32ed9",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-util-character": {
+      "name": "micromark-util-character",
+      "version": "2.1.1",
+      "license": "MIT",
+      "package_sha256": "bf43c5df782cf1cf985d89a8f01fd1a7b7b4bae9bf2b9c07e633c2379b1dbd7f",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/mdast-util-find-and-replace/node_modules/escape-string-regexp": {
+      "name": "escape-string-regexp",
+      "version": "5.0.0",
+      "license": "MIT",
+      "package_sha256": "6d7ae0240943e38cb8a8dd35242584b2c3415a2bca83aa86497d3b7b1bef08ef",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/mdast-util-find-and-replace": {
+      "name": "mdast-util-find-and-replace",
+      "version": "3.0.2",
+      "license": "MIT",
+      "package_sha256": "7257228953a3a5577a5dbabe7946af43975751ff0b9fd77309e5fecd63972288",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/mdast-util-gfm-autolink-literal": {
+      "name": "mdast-util-gfm-autolink-literal",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "aaf24f25ff1d5dee2b19c2da3704f98fbc67ac2bdf9424858aeb19430649c50b",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-util-normalize-identifier": {
+      "name": "micromark-util-normalize-identifier",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "b22a2066064ff412b8f9ded011a14d3fac87c37c696da2d8e8a57a0c9c88dea0",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/mdast-util-gfm-footnote": {
+      "name": "mdast-util-gfm-footnote",
+      "version": "2.1.0",
+      "license": "MIT",
+      "package_sha256": "b91f4521e33413134bda4b3a481b165c764efd453cb7fb379f5b71b09309e11a",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/mdast-util-gfm-strikethrough": {
+      "name": "mdast-util-gfm-strikethrough",
+      "version": "2.0.0",
+      "license": "MIT",
+      "package_sha256": "58a2747007773f1d8b95bbb233589e6be6bdbdfe23612522d58ffeec1c7c98b2",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/markdown-table": {
+      "name": "markdown-table",
+      "version": "3.0.4",
+      "license": "MIT",
+      "package_sha256": "545694864e591196ed1cfc43b5b973b1662722cd081d3d113b25f298ac6d02f9",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/mdast-util-to-markdown": {
+      "name": "mdast-util-to-markdown",
+      "version": "2.1.2",
+      "license": "MIT",
+      "package_sha256": "79a01b2e7f0c1bdf3f3b1a2a9ba40d8d9d3378eba98b2909bddda41a90d870d1",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/longest-streak": {
+      "name": "longest-streak",
+      "version": "3.1.0",
+      "license": "MIT",
+      "package_sha256": "fe48cd537de554b59fcb057d28c4b10cfef569817040ae61beb8a9b323bf82df",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-util-classify-character": {
+      "name": "micromark-util-classify-character",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "f84c7e2b5f54a05fa725645d31810ad8531c278901d661c714d114ad978e634d",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/mdast-util-to-string": {
+      "name": "mdast-util-to-string",
+      "version": "4.0.0",
+      "license": "MIT",
+      "package_sha256": "0acb725dee2ee1c9d374b240c7a972da04cc94d13663b58fa52be009c3271a13",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/mdast-util-phrasing": {
+      "name": "mdast-util-phrasing",
+      "version": "4.1.0",
+      "license": "MIT",
+      "package_sha256": "c020a54303d9d422c9def6ba5416db74c0f30b2783f2a84b7248b0d61c2ac113",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/decode-named-character-reference": {
+      "name": "decode-named-character-reference",
+      "version": "1.3.0",
+      "license": "MIT",
+      "package_sha256": "b034b006d03650d0995148196898eac08012de40712cb984e968c7b99d96b55e",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-util-decode-numeric-character-reference": {
+      "name": "micromark-util-decode-numeric-character-reference",
+      "version": "2.0.2",
+      "license": "MIT",
+      "package_sha256": "b4eda7dc69734392cf0c79313423b21dacfe03ae43002e5fc18151613f37f532",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-util-decode-string": {
+      "name": "micromark-util-decode-string",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "3fde5acb664658ceef73bd64e17041e9762819a06ccee998d058d04e8ec34a2e",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/mdast-util-gfm-table": {
+      "name": "mdast-util-gfm-table",
+      "version": "2.0.0",
+      "license": "MIT",
+      "package_sha256": "8ab7c1402602e721347f377b537374d4f2dfdef7794f4c7b0711ad1f39e2239f",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/mdast-util-gfm-task-list-item": {
+      "name": "mdast-util-gfm-task-list-item",
+      "version": "2.0.0",
+      "license": "MIT",
+      "package_sha256": "156ef1ae561ef1558f5e3210c41f238a4707d9f451eecda92d832ef821d5e7f1",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/mdast-util-gfm": {
+      "name": "mdast-util-gfm",
+      "version": "3.1.0",
+      "license": "MIT",
+      "package_sha256": "5d3d27f68e6aac77039850c2587d49b2d8047f1fb46914d1f67eaec0a52c8fe1",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-util-chunked": {
+      "name": "micromark-util-chunked",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "20e4e68a94fb62188c9139721be97740ec32f77464b23c40677a89aee72584f6",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-util-combine-extensions": {
+      "name": "micromark-util-combine-extensions",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "43686ee41cc83e2460aaa49821d7f36b0b7fd525e88b253e10b1556520196554",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-extension-gfm-autolink-literal": {
+      "name": "micromark-extension-gfm-autolink-literal",
+      "version": "2.1.0",
+      "license": "MIT",
+      "package_sha256": "778b72859fb329cbca8ea93653b8b11da652f93147e2752773eef42b9091eaca",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-util-sanitize-uri": {
+      "name": "micromark-util-sanitize-uri",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "a694d9800a68d5d52916675f9231c16bf7e764658a9045d86b74c29736b59dd6",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-util-resolve-all": {
+      "name": "micromark-util-resolve-all",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "f786149ff20e6ab653b42ddf8109d4f14e839b80800513698f7de790b3819628",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-core-commonmark": {
+      "name": "micromark-core-commonmark",
+      "version": "2.0.3",
+      "license": "MIT",
+      "package_sha256": "f6b039e198e40c6ede380cc41da4c840555c18fd5f2be43a559fb5c4221c034d",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-factory-space": {
+      "name": "micromark-factory-space",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "26349d7f4aa3c2a4eb91fca569e2b5f70cfc8df1517d360542f8b99ab61a6961",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-util-subtokenize": {
+      "name": "micromark-util-subtokenize",
+      "version": "2.1.0",
+      "license": "MIT",
+      "package_sha256": "8dd7a96c44ac602941d16b0078cef059821871b047a6f6309ffd61bb470cd420",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-factory-destination": {
+      "name": "micromark-factory-destination",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "71e61f23d5e171525c8934e9a8ac51e649107e4658082938d19dab172533b483",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-factory-label": {
+      "name": "micromark-factory-label",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "2c1c73d0087a1195a34bff62b47d5119a49f210636b3759c6d459886b559ee5e",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-factory-title": {
+      "name": "micromark-factory-title",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "5b7d184aeb5ff4fa8b63a338800e80400a631ee594ff0d698a5a4668eddc9a16",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-factory-whitespace": {
+      "name": "micromark-factory-whitespace",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "ea0cbec4d722111585387048046a248ce272e3c587e228cc3cf98fe4919e48c6",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-util-html-tag-name": {
+      "name": "micromark-util-html-tag-name",
+      "version": "2.0.1",
+      "license": "MIT",
+      "package_sha256": "d541066042522d8c5247964225d3a9f08f7b902b75682ab57ceecfeee45ed90c",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-extension-gfm-footnote": {
+      "name": "micromark-extension-gfm-footnote",
+      "version": "2.1.0",
+      "license": "MIT",
+      "package_sha256": "6d01f1d739fa38fbe2784fcb9143554b2f19e4c1193f7d62efae46fb7d3b36d6",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-extension-gfm-strikethrough": {
+      "name": "micromark-extension-gfm-strikethrough",
+      "version": "2.1.0",
+      "license": "MIT",
+      "package_sha256": "5a115643dd899a6c828ab236bbeab6aaf2108276f5cbc989662d6204f5ab677a",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-extension-gfm-table": {
+      "name": "micromark-extension-gfm-table",
+      "version": "2.1.1",
+      "license": "MIT",
+      "package_sha256": "77614bfc3e826a49007c78569df530d2a0832188cce1b54dd4fe81b056540dc2",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-extension-gfm-task-list-item": {
+      "name": "micromark-extension-gfm-task-list-item",
+      "version": "2.1.0",
+      "license": "MIT",
+      "package_sha256": "2497c18c449db1459392e6e70bca781256cab6a69b3a35fc55acbd0360ceb85c",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark-extension-gfm": {
+      "name": "micromark-extension-gfm",
+      "version": "3.0.0",
+      "license": "MIT",
+      "package_sha256": "f0c6ffb3bbbf52b1e5d939566b8d68097cbdd061598f09fde72af8a38c948bee",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/remark-gfm": {
+      "name": "remark-gfm",
+      "version": "4.0.1",
+      "license": "MIT",
+      "package_sha256": "c199482a69355b610bd1ff225b097776d4a990445b11e5f4c618930dacc8c79d",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/clsx": {
+      "name": "clsx",
+      "version": "2.1.1",
+      "license": "MIT",
+      "package_sha256": "a5e616b9883177fb47c1fca22b6a4ab42be1c3ed6ffae8595a5c7d88630eeec2",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/tailwind-merge": {
+      "name": "tailwind-merge",
+      "version": "3.6.0",
+      "license": "MIT",
+      "package_sha256": "dd8a34386cdd58744a48027a30fc75103d8bf246cbbb4aa90f0b2333b25818b6",
+      "licenses": [
+        "LICENSE.md"
+      ]
+    },
+    "node_modules/estree-util-is-identifier-name": {
+      "name": "estree-util-is-identifier-name",
+      "version": "3.0.0",
+      "license": "MIT",
+      "package_sha256": "d0f734156695c70baee2e43c094adde322839ddc23a517ea0039b3ff6a6567f9",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/hast-util-whitespace": {
+      "name": "hast-util-whitespace",
+      "version": "3.0.0",
+      "license": "MIT",
+      "package_sha256": "50a1eeeab4c354912b9f61e5b7aad22762dcbd96f740e58146f303bc4826f0b4",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/inline-style-parser": {
+      "name": "inline-style-parser",
+      "version": "0.2.7",
+      "license": "MIT",
+      "package_sha256": "905dabd170bc0374e32e35b8c5d02068b5ffb797120dd7de0f6bc172a7ae8abd",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/style-to-object": {
+      "name": "style-to-object",
+      "version": "1.0.14",
+      "license": "MIT",
+      "package_sha256": "54ea1a1438b9cb9a02e9f62339d1f4d17c6d896224fe431495605f7e5a4972f3",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/style-to-js": {
+      "name": "style-to-js",
+      "version": "1.1.21",
+      "license": "MIT",
+      "package_sha256": "ef8bc5b200a5a0e06ffea8b5ebb4bb596a3dbc9821a7144a5f3244d5f4b2231b",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/unist-util-stringify-position": {
+      "name": "unist-util-stringify-position",
+      "version": "4.0.0",
+      "license": "MIT",
+      "package_sha256": "2fb7e8fcbf4e701e62f07887bd9f16e699e29c87a19acd128c11788fb9e27c0e",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/vfile-message": {
+      "name": "vfile-message",
+      "version": "4.0.3",
+      "license": "MIT",
+      "package_sha256": "407fa964ad59ce6c07cd50f0e6c77366744b952910a5bbb64def63a55bf6a82d",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/hast-util-to-jsx-runtime": {
+      "name": "hast-util-to-jsx-runtime",
+      "version": "2.3.6",
+      "license": "MIT",
+      "package_sha256": "30dc325d26a45aed9ca3c9c686249cc40f9e234019d220dd954dad488d9fab49",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/html-url-attributes": {
+      "name": "html-url-attributes",
+      "version": "3.0.1",
+      "license": "MIT",
+      "package_sha256": "0bd29e79398437b88c9647434c40c48168d87b22f7448f5f083f4f2d8ab063d8",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/micromark": {
+      "name": "micromark",
+      "version": "4.0.2",
+      "license": "MIT",
+      "package_sha256": "e2423e9665ea6d21d78cb520e812249cdbce2428bd6a6e9b38438a2569b05f2d",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/mdast-util-from-markdown": {
+      "name": "mdast-util-from-markdown",
+      "version": "2.0.3",
+      "license": "MIT",
+      "package_sha256": "4f7c4700c78d6781af46eb12b2f908b0503d8beefa8b2cea0fbfe9de8444e438",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/remark-parse": {
+      "name": "remark-parse",
+      "version": "11.0.0",
+      "license": "MIT",
+      "package_sha256": "47be70916ff853a6c35d8d858844c7b104d100f70999d579884859cf8d88a50c",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/mdast-util-to-hast": {
+      "name": "mdast-util-to-hast",
+      "version": "13.2.1",
+      "license": "MIT",
+      "package_sha256": "aa1e17fedf46914534ba0c67016734edc6d0fc919057556eb1034160f795b596",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/trim-lines": {
+      "name": "trim-lines",
+      "version": "3.0.1",
+      "license": "MIT",
+      "package_sha256": "c279da1994b06098ed6f7fde2755c78c017e91e245c35bb4770232f116597c21",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/remark-rehype": {
+      "name": "remark-rehype",
+      "version": "11.1.2",
+      "license": "MIT",
+      "package_sha256": "f9886f99f9f38652d56ca256aa713e359e085ed42f7d89fd66671b49f4b83b64",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/bail": {
+      "name": "bail",
+      "version": "2.0.2",
+      "license": "MIT",
+      "package_sha256": "337981479ea353a473e2b8126adf545c299e368cf7fa31f21d92fd9b40cb029f",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/extend": {
+      "name": "extend",
+      "version": "3.0.2",
+      "license": "MIT",
+      "package_sha256": "8d891b3f00bead114c4741d8a594e7aaa59114f53782ec9a9319a619709dc14f",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/is-plain-obj": {
+      "name": "is-plain-obj",
+      "version": "4.1.0",
+      "license": "MIT",
+      "package_sha256": "ac84142050cd4d1854c489a3d61e0c991550195ae5ae37d9347b736424b09c59",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/trough": {
+      "name": "trough",
+      "version": "2.2.0",
+      "license": "MIT",
+      "package_sha256": "ced4e1e0914cb51aac812dee30936fa47b15286927180dd97c0e257f05f07e1e",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/vfile": {
+      "name": "vfile",
+      "version": "6.0.3",
+      "license": "MIT",
+      "package_sha256": "359ca117da48c3c42c73b9032369a412c5ad3462549d85aba090461e35227745",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/unified": {
+      "name": "unified",
+      "version": "11.0.5",
+      "license": "MIT",
+      "package_sha256": "f91a44220f8b7c4a4de6ebaab6fc23b92d29a95cb7e5e6a7f0f24d199779fbad",
+      "licenses": [
+        "license"
+      ]
+    },
+    "node_modules/streamdown/node_modules/marked": {
+      "name": "marked",
+      "version": "17.0.6",
+      "license": "MIT",
+      "package_sha256": "bbba02618ed635ecfc09085eb13c24dc41017df5526ef305bc39c48d563bbd8d",
+      "licenses": [
+        "LICENSE.md"
+      ]
+    },
+    "node_modules/streamdown": {
+      "name": "streamdown",
+      "version": "2.5.0",
+      "license": "Apache-2.0",
+      "package_sha256": "828b00e3ef03f90704058400fb9ed824c344574504ed48a823e075bd97ea73eb",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/scheduler": {
+      "name": "scheduler",
+      "version": "0.27.0",
+      "license": "MIT",
+      "package_sha256": "393bb96b7e481bf50189a1a02c7e0e7f4d01acba5abc6fbe7d214638624462fc",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/nanostores": {
+      "name": "nanostores",
+      "version": "1.4.2",
+      "license": "MIT",
+      "package_sha256": "f80c1357c0344db04c85779d325c422b8d2fd4bb8beb8a800d543bf38833239e",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/@nanostores/react": {
+      "name": "@nanostores/react",
+      "version": "1.1.0",
+      "license": "MIT",
+      "package_sha256": "c83d2a8d4827dcfd2d1fb207b4dff63fa6ccb24e6ae9b35ba2f36bff044bc676",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/use-stick-to-bottom": {
+      "name": "use-stick-to-bottom",
+      "version": "1.1.6",
+      "license": "MIT",
+      "package_sha256": "a1c46519ec61e179948625cc240fc9823f05f1d5a63fddc5fa158936305c6628",
+      "licenses": [
+        "LICENSE.txt"
+      ]
+    },
+    "node_modules/@tabler/icons-react": {
+      "name": "@tabler/icons-react",
+      "version": "3.44.0",
+      "license": "MIT",
+      "package_sha256": "62711298b2da693b8816a9df0912233530594c6f8b9ae453cc13e6d4ab3a42ec",
+      "licenses": [
+        "LICENSE"
+      ]
+    },
+    "node_modules/@icons-pack/react-simple-icons": {
+      "name": "@icons-pack/react-simple-icons",
+      "version": "13.11.1",
+      "license": "MIT",
+      "package_sha256": "4ea5db678cef96bb582bbf3d8c59cff759d86d5571949b443eaebf22d675efba",
+      "licenses": [
+        "LICENSE"
+      ]
+    }
+  },
+  "execution_transport_modules": 0,
+  "host_bridge": "disabled_at_build",
+  "transformed_display_leaves": [
+    "src/i18n/context.tsx",
+    "src/lib/external-link.tsx"
+  ]
+}

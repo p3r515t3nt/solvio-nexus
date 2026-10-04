@@ -1,0 +1,76 @@
+/* Focused layout regression using actual temporary HTTPS/Core admission.
+ * No model, microphone, external site or production store is used. */
+const {chromium}=require('playwright');
+const fs=require('fs'),path=require('path'),assert=require('node:assert/strict');
+const out=path.resolve(process.argv[2]);
+const url=fs.readFileSync(path.join(out,'dashboard-url.txt'),'utf8').trim(),origin=new URL(url).origin;
+assert.equal(new URL(url).hostname,'127.0.0.1');
+let browser;const passed=[];
+(async()=>{
+ browser=await chromium.launch({headless:true,executablePath:process.env.BROWSER_EXECUTABLE});
+ const context=await browser.newContext({ignoreHTTPSErrors:true,viewport:{width:1440,height:1000}});
+ await context.route('**/*',r=>new URL(r.request().url()).origin===origin?r.continue():r.abort());
+ const page=await context.newPage(),faults=[],posts=[];page.setDefaultTimeout(10000);
+ page.on('pageerror',e=>faults.push(e.message));
+ await page.addInitScript(()=>{window.micCalls=0;navigator.mediaDevices.getUserMedia=async()=>{window.micCalls++;throw Error('No microphone in layout test');};});
+ await page.goto(url);await page.locator('#enrollment').fill('n5-test-only-'.padEnd(43,'0'));
+ await page.locator('#login-form button').click();await page.locator('#workspace').waitFor({state:'visible'});
+ await page.locator('#overview-view').waitFor({state:'visible'});
+ assert.equal(await page.locator('#voice-home #browser-voice').count(),1);
+ assert.equal(await page.locator('#browser-voice').count(),1);
+ assert.equal(await page.locator('#task-list').isVisible(),false);
+ assert.equal(await page.locator('#result').isVisible(),false);
+ assert.equal(await page.locator('#objective').isVisible(),true);
+ assert.equal(await page.locator('#voice-start').isVisible(),true);
+ assert.equal(await page.locator('#voice-end').isVisible(),false);
+ assert.equal(await page.locator('#voice-mute').isVisible(),false);
+ assert.equal(await page.evaluate(()=>micCalls),0);
+ await page.screenshot({path:path.join(out,'focus-home-desktop.png'),fullPage:true});
+ await page.setViewportSize({width:390,height:844});
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+ await page.screenshot({path:path.join(out,'focus-home-mobile.png'),fullPage:true});
+ await page.setViewportSize({width:320,height:780});
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+ await page.screenshot({path:path.join(out,'focus-home-320.png'),fullPage:true});
+ await page.setViewportSize({width:1440,height:1000});
+ passed.push('quiet_home_separates_task_inventory_and_detail_without_starting_audio');
+
+ await page.route('**/v1/agent/tasks',async route=>{
+  if(route.request().method()!=='POST')return route.continue();
+  const response=await route.fetch(),body=await response.json();assert.equal(response.status(),201);
+  posts.push({request:route.request().postDataJSON(),accepted:body});await route.fulfill({response});
+ });
+ const objective='Lokaler Layouttest: Zwei unverbindliche Optionen vergleichen.';
+ await page.locator('#objective').fill(objective);await page.locator('#task-submit').click();
+ await page.locator('#conversation').waitFor({state:'visible'});await page.locator('#conversation-result #result[data-run-id] > .state').waitFor();
+ assert.equal(posts.length,1);assert.equal(posts[0].request.task.objective,objective);
+ const runId=posts[0].accepted.run_id;assert.match(runId,/^ar-[a-f0-9]{16}$/);
+ assert.match(await page.locator('#result').textContent(),/Lokaler Layouttest/);
+ assert.equal(await page.locator('#overview-view').isVisible(),true);
+ assert.equal(await page.locator('#conversation-objective').innerText(),objective);
+ await page.getByRole('button',{name:'SOLVIO',exact:true}).click();
+ assert.equal(await page.locator('#task-list').isVisible(),false);
+ await page.getByRole('button',{name:'Aufträge',exact:true}).click();
+ await page.locator('#tasks-view').waitFor({state:'visible'});
+ await page.locator('#task-list').getByText(objective,{exact:true}).click();
+ await page.locator('#conversation').waitFor({state:'visible'});
+ assert.equal(posts.length,1);
+ await page.getByRole('button',{name:'Auftrag abbrechen',exact:true}).click();
+ await page.getByRole('button',{name:'Bestätigen',exact:true}).click();
+ await page.locator('#decision-dialog').waitFor({state:'hidden'});
+ const state=await(await context.request.get(origin+'/v1/agent/runs/'+runId)).json();
+ assert.equal(state.zustand_code,'CANCELLED');assert.equal(posts.length,1);
+ passed.push('actual_task_start_reopen_and_confirmed_cancel_preserve_single_core_order');
+
+ const disclosures=page.locator('#result details');
+ assert(await disclosures.count()>=2,'cost/history information should remain present as expandable details');
+ assert.equal(await disclosures.evaluateAll(nodes=>nodes.every(n=>!n.open)),true);
+ await disclosures.first().locator(':scope > summary').click();assert.equal(await disclosures.first().evaluate(n=>n.open),true);
+ await page.setViewportSize({width:390,height:844});
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+ await page.screenshot({path:path.join(out,'focus-task-mobile.png'),fullPage:true});
+ assert.equal(await page.evaluate(()=>micCalls),0);assert.deepEqual(faults,[]);
+ passed.push('supporting_task_details_remain_accessible_and_mobile_has_no_horizontal_overflow');
+ fs.writeFileSync(path.join(out,'focus-browser-result.json'),JSON.stringify({passed,run_id:runId,temporary_core_only:true,microphone_calls:0,provider_calls:0,javascript_errors:faults},null,2)+'\n');
+ console.log(JSON.stringify({passed:passed.length,tests:passed}));
+})().catch(e=>{console.error(e.stack);process.exitCode=1;}).finally(async()=>{await browser?.close();});

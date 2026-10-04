@@ -1,0 +1,27 @@
+# SOLVIO node — never commit secrets, keys, runtime state, or models
+.env
+.venv/
+venv/
+runtime/
+logs/
+*.log
+secrets/
+certs/
+*.key
+*.crt
+*.pem
+*.csr
+private*.pem
+models/
+cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+dist/
+build/
+*.egg-info/
+config.json
+config.local.json
+
+# deploy template config (no secrets: paths only)
+!deploy/config.json

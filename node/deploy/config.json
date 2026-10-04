@@ -1,0 +1,32 @@
+{
+  "node_id": "hetzner-main",
+  "listen_host": "127.0.0.1",
+  "listen_port": 8443,
+  "tls": {
+    "ca_cert": "/etc/solvio-node/certs/ca.crt",
+    "server_cert": "/etc/solvio-node/certs/server.crt",
+    "server_key": "/etc/solvio-node/certs/server.key"
+  },
+  "limits": {
+    "max_request_bytes": 65536,
+    "max_concurrency": 8,
+    "max_queue": 32,
+    "request_timeout_s": 10.0,
+    "rate_limit_per_min": 600
+  },
+  "jobs": {
+    "enabled": true,
+    "db_path": "/var/lib/solvio-node/jobs.sqlite3",
+    "workers": 2,
+    "max_queued": 100,
+    "result_ttl_s": 259200.0,
+    "metadata_ttl_s": 604800.0
+  },
+  "log_path": "/var/lib/solvio-node/logs/node.jsonl",
+  "enabled_capabilities": [
+    "system.health",
+    "compute.sha256",
+    "research.fetch_public_url",
+    "research.search_public_web"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "schema": 1,
+  "kind": "public_source_content_snapshot",
+  "files": {
+    "src/solvio/security/__init__.py": "942c65adf6cb3e4e8f1f2867e3d334ae8f58eec5",
+    "src/solvio/security/approval.py": "ae35e4017464749b962d22955df1c6c393427310",
+    "src/solvio/security/mobile_approval/__init__.py": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+    "src/solvio/security/mobile_approval/admin_cli.py": "444d52e2a08dbd689331d59d4b131c1abd5f8cd4",
+    "src/solvio/security/mobile_approval/app_attest.py": "5d46fd0bbe94415f40c278281604505f22753276",
+    "src/solvio/security/mobile_approval/attest_protocol.py": "f94507d3a954b5da9e754ae77df3d44ef7b87b58",
+    "src/solvio/security/mobile_approval/bridge.py": "66490a3a477f4ce9ce6ea1df9f35712c62f1e9eb",
+    "src/solvio/security/mobile_approval/browser_sessions.py": "38bf73873c3a674ef2282b4d9627e1db2eaa054d",
+    "src/solvio/security/mobile_approval/control.py": "851aa900c1fe9982012c06bbe4d02080085f0d2e",
+    "src/solvio/security/mobile_approval/crypto.py": "427c3b8bc41f50c5a848a59158564b56e88c646d",
+    "src/solvio/security/mobile_approval/execution.py": "e90d9aa6962128df2dd85eabbda071d8bfda8f96",
+    "src/solvio/security/mobile_approval/gateway.py": "76e9ce581fa88df5e7f7e9cd23c8aa5e7ed42ce1",
+    "src/solvio/security/mobile_approval/identity.py": "83a7274340a55acbe935506dfbe5c7f45ceadcfe",
+    "src/solvio/security/mobile_approval/observer_contract.py": "440937ad37c8765a2d6c2dd1b5fee3cdf4e7ba8a",
+    "src/solvio/security/mobile_approval/pairing.py": "9a2fe85795bd0656442cfd5c6a4f6cf5760cad5a",
+    "src/solvio/security/mobile_approval/portal_preparation.py": "3f436d14fe110a6c9383752b44bc1468668aeeb5",
+    "src/solvio/security/mobile_approval/protocol.py": "d6ef6b287390a2a8c1c70a7d86bf29cfb34f3030",
+    "src/solvio/security/mobile_approval/store.py": "081a0033f90bf44b4dfa7a41328e4d4153d5f900"
+  }
+}
